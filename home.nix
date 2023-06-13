@@ -30,6 +30,8 @@
     g = "git";
     ls = "exa";
     sl = "exa";
+    cut = "tuc";
+    ping = "prettyping";
     
     # tmux aliases
     tls = "tmux ls";	# backslash to temporarily disable alias
@@ -76,7 +78,6 @@
     pkgs.exa
     pkgs.bat
     pkgs.prettyping
-    pkgs.diff-so-fancy
     pkgs.ncdu
     pkgs.direnv
     pkgs.autojump
@@ -85,11 +86,8 @@
     pkgs.traceroute
     pkgs.neovim
 
-    # Desktop
-    pkgs.obsidian
-    pkgs.postman
-    pkgs.brave
-    pkgs.alacritty
+    # K8S
+    pkgs.kubectl
   ];
 
   programs.starship = {
