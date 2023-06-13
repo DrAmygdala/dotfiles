@@ -88,6 +88,7 @@
 
     # K8S
     pkgs.kubectl
+    pkgs.kubernetes-helm
   ];
 
   programs.starship = {
