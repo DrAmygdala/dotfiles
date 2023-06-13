@@ -89,6 +89,10 @@
     # K8S
     pkgs.kubectl
     pkgs.kubernetes-helm
+
+    # Zsh
+    pkgs.zsh-completions
+    pkgs.nix-zsh-completions
   ];
 
   programs.starship = {
