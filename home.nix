@@ -96,6 +96,9 @@
     # Zsh
     pkgs.zsh-completions
     pkgs.nix-zsh-completions
+
+    # Development
+    pkgs.nodejs_20
   ];
 
   programs.starship = {
