@@ -86,6 +86,9 @@
     pkgs.traceroute
     pkgs.neovim
 
+    # Git
+    pkgs.gitleaks
+
     # K8S
     pkgs.kubectl
     pkgs.kubernetes-helm
@@ -496,8 +499,6 @@
         "autojump"
         "sudo"
         "fd"
-        "docker"
-        "docker-compose"
         "git-flow"
         "pyenv"
       ];
