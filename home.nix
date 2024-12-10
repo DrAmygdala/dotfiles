@@ -85,6 +85,10 @@
     pkgs.gitflow
     pkgs.traceroute
     pkgs.neovim
+    pkgs.putty
+    pkgs.mtr
+    pkgs.shellcheck
+    pkgs.restic
 
     # Git
     pkgs.gitleaks
@@ -92,13 +96,20 @@
     # K8S
     pkgs.kubectl
     pkgs.kubernetes-helm
+    pkgs.k9s
 
     # Zsh
     pkgs.zsh-completions
     pkgs.nix-zsh-completions
 
-    # Development
-    pkgs.nodejs_20
+    # Knowledge management
+    pkgs.logseq
+
+    # Experimental
+    pkgs.nyxt
+    pkgs.emacs
+    pkgs.filezilla
+    pkgs.resumed
   ];
 
   programs.starship = {
@@ -467,7 +478,8 @@
       lg = "log -p";
       la = "!git config -l | rg alias | cut -c 7-";
       f = "!git ls-files | xargs rg -i";
-      rbm = "!git stash && git pull origin master && git rebase master && git stash pop";
+      rbm = "!git stash && git pull origin main && git rebase main && git stash pop";
+      brd = "!current=\"$(git branch --show-current)\" && git checkout --quiet main && git branch --merged | grep -v \"main\" | xargs git branch -d; git checkout --quiet \"$current\""
     };
     extraConfig = {
       core = {
@@ -491,6 +503,11 @@
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     enableCompletion = true;
+    initExtra = ''
+      export NVM_DIR="$([ -z "$HOME/.config-" ] && printf %s "$HOME/.nvm" || printf %s "$HOME/.config/nvm")" 
+      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+      export PATH="/home/kabir/.local/bin:$PATH"
+    '';
     history = {
       expireDuplicatesFirst = true;
       save = 100000000;
@@ -504,6 +521,9 @@
         "fd"
         "git-flow"
         "pyenv"
+        "nvm"
+        "yarn"
+        "poetry"
       ];
     };
   };
