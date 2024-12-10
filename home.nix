@@ -479,7 +479,7 @@
       la = "!git config -l | rg alias | cut -c 7-";
       f = "!git ls-files | xargs rg -i";
       rbm = "!git stash && git pull origin main && git rebase main && git stash pop";
-      brd = "!current=\"$(git branch --show-current)\" && git checkout --quiet main && git branch --merged | grep -v \"main\" | xargs git branch -d; git checkout --quiet \"$current\""
+      brd = "!current=\"$(git branch --show-current)\" && git checkout --quiet main && git branch --merged | grep -v \"main\" | xargs git branch -d; git checkout --quiet \"$current\"";
     };
     extraConfig = {
       core = {
