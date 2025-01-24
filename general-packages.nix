@@ -1,0 +1,25 @@
+{ pkgs }:
+[
+    pkgs.htop
+    pkgs.fzf
+    pkgs.ripgrep
+    pkgs.fd
+    pkgs.tuc
+    pkgs.tealdeer
+    pkgs.exa
+    pkgs.bat
+    pkgs.prettyping
+    pkgs.ncdu
+    pkgs.direnv
+    pkgs.autojump
+    pkgs.atuin
+    pkgs.gitflow
+    pkgs.traceroute
+    pkgs.neovim
+    pkgs.putty
+    pkgs.mtr
+    pkgs.shellcheck
+    pkgs.restic
+    pkgs.tree
+    pkgs.lnav
+]

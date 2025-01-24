@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -21,95 +21,17 @@
 
   nixpkgs.config = import ./config.nix;
 
-  home.shellAliases = {
-    
-    # Command substitutions
-    cat = "bat";
-    g = "git";
-    ls = "exa";
-    sl = "exa";
-    cut = "tuc";
-    ping = "prettyping";
-    
-    # tmux aliases
-    tls = "tmux ls";	# backslash to temporarily disable alias
-    ta = "tmux a -t";
-    
-    # Terminal appearance control
-    c = "clear";
-    
-    # grep aliases
-    grep = "grep --color=auto";
-    egrep = "egrep --color=auto";
-    fgrep = "fgrep --color=auto";
-    hgrep = "history | grep";
-    
-    # mkdir aliases
-    mkdir = "mkdir -pv";
-    
-    # vi aliases
-    vi = "nvim";
-    
-    # Safety
-    rm = "rm --preserve-root";
-    chown = "chown --preserve-root";
-    chmod = "chmod --preserve-root";
-    chgrp = "chgrp --preserve-root";
-    
-    # Pyenv aliases
-    pa = "pyenv activate";
-    pd = "pyenv deactivate";
-  };
+  home.shellAliases = import ./shell-aliases.nix;
 
   home.sessionVariables = {
     EDITOR = "nvim";
   };
 
-  home.packages = [
-    # CLI
-    pkgs.htop
-    pkgs.fzf
-    pkgs.ripgrep
-    pkgs.fd
-    pkgs.tuc
-    pkgs.tealdeer
-    pkgs.exa
-    pkgs.bat
-    pkgs.prettyping
-    pkgs.ncdu
-    pkgs.direnv
-    pkgs.autojump
-    pkgs.atuin
-    pkgs.gitflow
-    pkgs.traceroute
-    pkgs.neovim
-    pkgs.putty
-    pkgs.mtr
-    pkgs.shellcheck
-    pkgs.restic
-    pkgs.tree
-    pkgs.lnav
-
-    # Git
-    pkgs.gitleaks
-
-    # K8S
-    pkgs.kubectl
-    pkgs.kubernetes-helm
-    pkgs.k9s
-
-    # Zsh
-    pkgs.zsh-completions
-    pkgs.nix-zsh-completions
-
-    # Knowledge management
-    pkgs.logseq
-
-    # Experimental
-    pkgs.nyxt
-    pkgs.emacs
-    pkgs.filezilla
-    pkgs.resumed
+  home.packages = lib.mkMerge [ 
+    (import ./general-packages.nix { inherit pkgs; })
+    (import ./k8s-packages.nix { inherit pkgs; })
+    (import ./git-packages.nix { inherit pkgs; })
+    (import ./zsh-packages.nix { inherit pkgs; })
   ];
 
   programs.starship = {
