@@ -89,6 +89,7 @@
     pkgs.mtr
     pkgs.shellcheck
     pkgs.restic
+    pkgs.tree
 
     # Git
     pkgs.gitleaks
