@@ -34,12 +34,7 @@
     (import ./zsh-packages.nix { inherit pkgs; })
   ];
 
-  programs.starship = {
-    enable = true;
-    settings = {
-      add_newline = true;
-    };
-  };
+  programs.starship = import ./starship.nix;
 
   programs.tmux = {
     enable = true;
