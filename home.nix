@@ -35,10 +35,7 @@
   ];
 
   programs.starship = import ./starship-settings.nix;
-
   programs.tmux = (import ./tmux-settings.nix { inherit pkgs; });
-
   programs.git = import ./git-settings.nix;
-
   programs.zsh = import ./zsh-settings.nix;
 }
