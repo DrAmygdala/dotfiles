@@ -34,7 +34,7 @@
     (import ./zsh-packages.nix { inherit pkgs; })
   ];
 
-  programs.starship = import ./starship.nix;
+  programs.starship = import ./starship-settings.nix;
 
   programs.tmux = (import ./tmux-settings.nix { inherit pkgs; });
 
