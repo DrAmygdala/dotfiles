@@ -19,9 +19,7 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
+  nixpkgs.config = import ./config.nix;
 
   home.shellAliases = {
     
@@ -90,6 +88,7 @@
     pkgs.shellcheck
     pkgs.restic
     pkgs.tree
+    pkgs.lnav
 
     # Git
     pkgs.gitleaks
