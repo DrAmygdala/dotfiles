@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -28,7 +28,7 @@
   };
 
   home.packages = lib.mkMerge [ 
-    (import ./general-packages.nix { inherit pkgs; })
+    (import ./general-packages.nix { inherit pkgs inputs; })
     (import ./k8s-packages.nix { inherit pkgs; })
     (import ./git-packages.nix { inherit pkgs; })
     (import ./zsh-packages.nix { inherit pkgs; })

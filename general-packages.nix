@@ -1,5 +1,6 @@
-{ pkgs }:
+{ pkgs, inputs }:
 [
+    inputs.isd.packages.${pkgs.system}.default
     pkgs.htop
     pkgs.fzf
     pkgs.ripgrep
