@@ -8,9 +8,7 @@
       url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    isd = {
-      url = "github:isd-project/isd";
-    };
+    isd.url = "github:isd-project/isd";
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
