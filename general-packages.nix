@@ -7,7 +7,7 @@
     pkgs.fd
     pkgs.tuc
     pkgs.tealdeer
-    pkgs.exa
+    pkgs.eza
     pkgs.bat
     pkgs.prettyping
     pkgs.ncdu

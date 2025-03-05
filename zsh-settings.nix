@@ -1,8 +1,8 @@
 {
     enable = true;
     autocd = true;
-    enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
     enableCompletion = true;
     initExtra = ''
       export NVM_DIR="$([ -z "$HOME/.config-" ] && printf %s "$HOME/.nvm" || printf %s "$HOME/.config/nvm")" 
