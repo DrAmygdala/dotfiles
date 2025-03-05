@@ -23,4 +23,5 @@
     pkgs.restic
     pkgs.tree
     pkgs.lnav
+    pkgs.uv
 ]
