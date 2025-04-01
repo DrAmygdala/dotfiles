@@ -19,7 +19,6 @@
       plugins = [
         "autojump"
         "sudo"
-        "fd"
         "git-flow"
         "pyenv"
         "nvm"
