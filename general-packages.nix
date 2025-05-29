@@ -24,4 +24,8 @@
     pkgs.tree
     pkgs.lnav
     pkgs.uv
+    pkgs.fuzzel
+    pkgs.ranger
+    pkgs.xfce.thunar
+    pkgs.copyq
 ]

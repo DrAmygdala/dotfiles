@@ -1,0 +1,10 @@
+{
+	enable = true;
+	settings = {
+		window = {
+			opacity = 0.95;
+			decorations = "None";
+			startup_mode = "Maximized";
+		};
+	};
+}
