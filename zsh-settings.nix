@@ -22,6 +22,11 @@
       save = 100000000;
       size = 1000000000;
     };
+    profileExtra = ''
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
+    '';
     oh-my-zsh = {
       enable = true;
       plugins = [
