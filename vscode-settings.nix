@@ -27,4 +27,60 @@
 	    "editor.minimap.enabled" = false;
 	    "autoDocstring.docstringFormat" = "sphinx";
 	};
+	globalSnippets = {
+  		todo = {
+    			body = [
+      				"$LINE_COMMENT TODO: $0"
+    			];
+    			description = "Insert a TODO remark";
+    			prefix = [
+      				"todo"
+    			];
+  		};
+	};
+	languageSnippets = {
+		python = {
+			function-definition = {
+				body = [
+					"def \${1:function_name}(\${2:args}) -> \${3:output_type}:"
+					"\t$0"
+				];
+				description = "Insert a function definition";
+				prefix = [
+					"def"
+				];
+			};
+			class-definition = {
+				body = [
+					"class \${1:ClassName}:"
+					"\tdef __init__(self, \${2:args}) -> None:"
+					"\t\t$0"
+				];
+				description = "Insert class definition";
+				prefix = [
+					"class"
+				];
+			};
+			if-statement = {
+				body = [
+					"if \${1:condition}:"
+					"\t$0"
+				];
+				description = "Insert if statement";
+				prefix = [
+					"if"
+				];
+			};
+			for-loop = {
+				body = [
+					"for \${1:item} in \${2:iterable}:"
+					"\t$0"
+				];
+				description = "Insert a for loop";
+				prefix = [
+					"for"
+				];
+			};
+		};
+	};
 }
