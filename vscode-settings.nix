@@ -13,19 +13,16 @@
 		pkgs.vscode-extensions.redhat.vscode-yaml
 		pkgs.vscode-extensions.ms-python.python
 		pkgs.vscode-extensions.ms-python.debugpy
-		pkgs.vscode-extensions.ms-python.vscode-pylance
 		pkgs.vscode-extensions.vscodevim.vim
 	];
 	mutableExtensionsDir = true;
 	userSettings = {
 	    "editor.renderWhitespace" = "all";
-	    "python.languageServer" = "Pylance";
+	    "python.languageServer" = "Jedi";
 	    "files.autoSave" = "afterDelay";
 	    "editor.formatOnSave" = true;
-	    "svelte.enable-ts-plugin" = true;
-	    "window.zoomLevel" = -1;
+	    "window.zoomLevel" = -2;
 	    "editor.minimap.enabled" = false;
-	    "autoDocstring.docstringFormat" = "sphinx";
 	};
 	globalSnippets = {
   		todo = {
