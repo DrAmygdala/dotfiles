@@ -43,4 +43,5 @@
   programs.zsh = import ./zsh-settings.nix;
   programs.alacritty = import ./alacritty-settings.nix;
   programs.vscode = (import ./vscode-settings.nix { inherit pkgs; });
+  programs.fuzzel = (import ./fuzzel-settings.nix { inherit pkgs; });
 }
