@@ -10,22 +10,36 @@
         "eDP-1"
         "HDMI-A-1"
       ];
-      modules-left = [ "sway/workspaces" "sway/mode" "wlr/taskbar" ];
-      modules-center = [ "sway/window" "custom/hello-from-waybar" ];
-      modules-right = [ "mpd" "custom/mymodule#with-css-id" "temperature" ];
-  
+      modules-left = [ "sway/workspaces" "sway/mode" ];
+      modules-center = [ "clock" ];
+      modules-right = [ "cpu" "memory" "battery" ];
+      clock = {
+      	format = "{:%a, %d. %b  %H:%M}";
+      };
       "sway/workspaces" = {
         disable-scroll = true;
         all-outputs = true;
       };
-      "custom/hello-from-waybar" = {
-        format = "hello {}";
-        max-length = 40;
-        interval = "once";
-        exec = pkgs.writeShellScript "hello-from-waybar" ''
-          echo "from within waybar"
-        '';
+      cpu = {
+      	format = "CPU: {}%";
+      };
+      memory = {
+      	format = "MEM: {}%";
       };
     };
   };
+  style = ''
+  * {
+  	border: none;
+  }
+
+  window#waybar {
+	background-color: transparent
+  }
+
+  .module {
+	border-radius: 15px;
+	margin: 0 1px;
+  }
+  '';
 }
