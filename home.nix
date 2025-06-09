@@ -34,7 +34,7 @@
     (import ./zsh-packages.nix { inherit pkgs; })
   ];
 
-  wayland.windowManager.sway = import ./sway-settings.nix;
+  wayland.windowManager.sway = (import ./sway-settings.nix { inherit pkgs; });
 
   programs.waybar = (import ./waybar-settings.nix { inherit pkgs; });
   programs.starship = import ./starship-settings.nix;
@@ -44,4 +44,5 @@
   programs.alacritty = import ./alacritty-settings.nix;
   programs.vscode = (import ./vscode-settings.nix { inherit pkgs; });
   programs.fuzzel = (import ./fuzzel-settings.nix { inherit pkgs; });
+  programs.wlogout = import ./wlogout-settings.nix;
 }
