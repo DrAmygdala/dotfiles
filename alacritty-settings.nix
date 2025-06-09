@@ -6,5 +6,8 @@
 			decorations = "None";
 			startup_mode = "Maximized";
 		};
+		font = {
+			size = 8;
+		};
 	};
 }
