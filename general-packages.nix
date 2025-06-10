@@ -28,4 +28,5 @@
     pkgs.ranger
     pkgs.xfce.thunar
     pkgs.copyq
+    pkgs.betterdiscordctl
 ]
