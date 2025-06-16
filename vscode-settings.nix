@@ -16,6 +16,7 @@
 			pkgs.vscode-extensions.ms-python.python
 			pkgs.vscode-extensions.ms-python.debugpy
 			pkgs.vscode-extensions.vscodevim.vim
+			pkgs.vscode-extensions.continue.continue
 		];
 		userSettings = {
 		    "editor.renderWhitespace" = "all";
@@ -24,6 +25,7 @@
 		    "editor.formatOnSave" = true;
 		    "window.zoomLevel" = -2;
 		    "editor.minimap.enabled" = false;
+		    "continue.telemetryEnabled" = false;
 		};
 		globalSnippets = {
 	  		todo = {
