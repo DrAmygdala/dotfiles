@@ -35,6 +35,7 @@
   ];
 
   wayland.windowManager.sway = (import ./sway-settings.nix { inherit pkgs; });
+  editorconfig = import ./editorconfig.nix;
 
   programs.waybar = (import ./waybar-settings.nix { inherit pkgs; });
   programs.starship = import ./starship-settings.nix;
