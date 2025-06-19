@@ -16,7 +16,6 @@
                 pkgs.vscode-extensions.ms-python.python
                 pkgs.vscode-extensions.ms-python.debugpy
                 pkgs.vscode-extensions.vscodevim.vim
-                pkgs.vscode-extensions.continue.continue
         ];
         userSettings = {
             "editor.renderWhitespace" = "all";
@@ -25,12 +24,6 @@
             "editor.formatOnSave" = true;
             "window.zoomLevel" = -2;
             "editor.minimap.enabled" = false;
-            "continue.telemetryEnabled" = false;
-            "yaml.schemas" = {
-                "/home/kabir/.vscode-oss/extensions/continue.continue-1.1.48-linux-x64/config-yaml-schema.json" = [
-                    ".continue/**/*.yaml"
-                ];
-            };
         };
         globalSnippets = {
             todo = {
