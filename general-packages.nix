@@ -29,4 +29,5 @@
     pkgs.xfce.thunar
     pkgs.copyq
     pkgs.betterdiscordctl
+    pkgs.kdePackages.kate
 ]
