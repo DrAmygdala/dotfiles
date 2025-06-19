@@ -14,7 +14,7 @@
     pkgs.direnv
     pkgs.autojump
     pkgs.atuin
-    pkgs.gitflow
+    pkgs.git-town
     pkgs.traceroute
     pkgs.neovim
     pkgs.putty
