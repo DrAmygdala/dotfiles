@@ -1,5 +1,5 @@
 {
-    # useful links: 
+    # useful links:
     # - https://github.com/alexkaratarakis/gitattributes
     # - https://github.com/github/gitignore
     enable = true;
@@ -129,7 +129,7 @@
       cp = "cherry-pick";
       st = "status -s";
       cl = "clone";
-      br = "branch"; 
+      br = "branch";
       diff = "diff --word-diff";
       dc = "diff --cached";
       lg = "log -p";
@@ -137,6 +137,21 @@
       f = "!git ls-files | xargs rg -i";
       rbm = "!git stash && git pull origin main && git rebase main && git stash pop";
       brd = "!current=\"$(git branch --show-current)\" && git checkout --quiet main && git branch --merged | grep -v \"main\" | xargs git branch -d; git checkout --quiet \"$current\"";
+        append = "town append";
+        compress = "town compress";
+        contribute = "town contribute";
+        diff-parent = "town diff-parent";
+        hack = "town hack";
+        delete = "town delete";
+        observe = "town observe";
+        park = "town park";
+        prepend = "town prepend";
+        propose = "town propose";
+        rename = "town rename";
+        repo = "town repo";
+        set-parent = "town set-parent";
+        ship = "town ship";
+        sync = "town sync";
     };
     extraConfig = {
       core = {
