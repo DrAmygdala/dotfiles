@@ -6,7 +6,7 @@
     enableCompletion = true;
     initContent = ''
       # NVM
-      export NVM_DIR="$([ -z "$HOME/.config-" ] && printf %s "$HOME/.nvm" || printf %s "$HOME/.config/nvm")" 
+      export NVM_DIR="$([ -z "$HOME/.config-" ] && printf %s "$HOME/.nvm" || printf %s "$HOME/.config/nvm")"
       [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
       export PATH="/home/kabir/.local/bin:$PATH"
 
@@ -37,6 +37,7 @@
         "nvm"
         "yarn"
         "poetry"
+        "direnv"
       ];
     };
   }

@@ -27,7 +27,7 @@
     EDITOR = "nvim";
   };
 
-  home.packages = lib.mkMerge [ 
+  home.packages = lib.mkMerge [
     (import ./general-packages.nix { inherit pkgs inputs; })
     (import ./k8s-packages.nix { inherit pkgs; })
     (import ./git-packages.nix { inherit pkgs; })
@@ -46,4 +46,5 @@
   programs.vscode = (import ./vscode-settings.nix { inherit pkgs; });
   programs.fuzzel = (import ./fuzzel-settings.nix { inherit pkgs; });
   programs.wlogout = import ./wlogout-settings.nix;
+  programs.direnv = import ./direnv-settings.nix;
 }

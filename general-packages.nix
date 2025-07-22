@@ -11,7 +11,6 @@
     pkgs.bat
     pkgs.prettyping
     pkgs.ncdu
-    pkgs.direnv
     pkgs.autojump
     pkgs.atuin
     pkgs.git-town
