@@ -24,6 +24,7 @@
             "editor.formatOnSave" = true;
             "window.zoomLevel" = -2;
             "editor.minimap.enabled" = false;
+            "redhat.telemetry.enabled" = false;
         };
         globalSnippets = {
             todo = {
