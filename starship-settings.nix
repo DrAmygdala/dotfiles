@@ -1,6 +1,4 @@
 {
     enable = true;
-    settings = {
-      add_newline = true;
-    };
+    settings = (builtins.fromTOML (builtins.readFile ./starship.toml));
 }
