@@ -25,6 +25,7 @@
             "window.zoomLevel" = -2;
             "editor.minimap.enabled" = false;
             "redhat.telemetry.enabled" = false;
+            "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Hack Nerd Font'";
         };
         globalSnippets = {
             todo = {
