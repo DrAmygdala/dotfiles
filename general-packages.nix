@@ -15,7 +15,6 @@
     pkgs.atuin
     pkgs.git-town
     pkgs.traceroute
-    pkgs.neovim
     pkgs.putty
     pkgs.mtr
     pkgs.restic

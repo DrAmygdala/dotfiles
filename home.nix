@@ -47,4 +47,5 @@
   programs.fuzzel = (import ./fuzzel-settings.nix { inherit pkgs; });
   programs.wlogout = import ./wlogout-settings.nix;
   programs.direnv = import ./direnv-settings.nix;
+  programs.neovim = import ./nvim-settings.nix;
 }
