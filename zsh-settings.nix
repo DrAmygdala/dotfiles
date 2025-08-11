@@ -16,6 +16,7 @@
         "sudo"
         "git-flow"
         "direnv"
+        "kubectl"
       ];
     };
   }
