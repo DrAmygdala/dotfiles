@@ -13,7 +13,6 @@
     pkgs.ncdu
     pkgs.autojump
     pkgs.atuin
-    pkgs.git-town
     pkgs.traceroute
     pkgs.putty
     pkgs.mtr
