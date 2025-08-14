@@ -14,7 +14,6 @@
       plugins = [
         "autojump"
         "sudo"
-        "git-flow"
         "direnv"
         "kubectl"
       ];
