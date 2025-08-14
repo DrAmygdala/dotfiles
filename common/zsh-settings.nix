@@ -11,11 +11,6 @@
     };
     oh-my-zsh = {
       enable = true;
-      plugins = [
-        "autojump"
-        "sudo"
-        "direnv"
-        "kubectl"
-      ];
+      plugins = import ./oh-my-zsh-plugins.nix;
     };
   }
