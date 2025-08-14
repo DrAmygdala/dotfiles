@@ -29,7 +29,6 @@
 
   home.packages = lib.mkMerge [
     (import ./common/general-packages.nix { inherit pkgs inputs; })
-    (import ./common/k8s-packages.nix { inherit pkgs; })
     (import ./common/git-packages.nix { inherit pkgs; })
     (import ./common/zsh-packages.nix { inherit pkgs; })
   ];
