@@ -30,6 +30,7 @@
   home.packages = lib.mkMerge [
     (import ./common/general-packages.nix { inherit pkgs inputs; })
     (import ./common/git-packages.nix { inherit pkgs; })
+    (import ./work/git-packages.nix { inherit pkgs; })
     (import ./common/zsh-packages.nix { inherit pkgs; })
   ];
 
@@ -43,7 +44,10 @@
     mergedGit = import (./common/git-settings.nix) // import (./work/git-settings.nix);
     in
     mergedGit;
-  programs.zsh = import ./common/zsh-settings.nix;
+  programs.zsh = let
+    mergedZsh = import (./common/zsh-settings.nix) // { oh-my-zsh.plugins = import (./common/oh-my-zsh-plugins.nix) ++ import (./work/oh-my-zsh-plugins.nix); };
+    in
+    mergedZsh;
   programs.alacritty = import ./common/alacritty-settings.nix;
   programs.vscode = (import ./common/vscode-settings.nix { inherit pkgs; });
   programs.fuzzel = (import ./common/fuzzel-settings.nix { inherit pkgs; });
