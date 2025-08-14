@@ -19,33 +19,33 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  nixpkgs.config = import ./config.nix;
+  nixpkgs.config = import ./common/config.nix;
 
-  home.shellAliases = import ./shell-aliases.nix;
+  home.shellAliases = import ./common/shell-aliases.nix;
 
   home.sessionVariables = {
     EDITOR = "nvim";
   };
 
   home.packages = lib.mkMerge [
-    (import ./general-packages.nix { inherit pkgs inputs; })
-    (import ./k8s-packages.nix { inherit pkgs; })
-    (import ./git-packages.nix { inherit pkgs; })
-    (import ./zsh-packages.nix { inherit pkgs; })
+    (import ./common/general-packages.nix { inherit pkgs inputs; })
+    (import ./common/k8s-packages.nix { inherit pkgs; })
+    (import ./common/git-packages.nix { inherit pkgs; })
+    (import ./common/zsh-packages.nix { inherit pkgs; })
   ];
 
-  wayland.windowManager.sway = (import ./sway-settings.nix { inherit pkgs; });
-  editorconfig = import ./editorconfig.nix;
+  wayland.windowManager.sway = (import ./common/sway-settings.nix { inherit pkgs; });
+  editorconfig = import ./common/editorconfig.nix;
 
-  programs.waybar = (import ./waybar-settings.nix { inherit pkgs; });
-  programs.starship = import ./starship-settings.nix;
-  programs.tmux = (import ./tmux-settings.nix { inherit pkgs; });
-  programs.git = import ./git-settings.nix;
-  programs.zsh = import ./zsh-settings.nix;
-  programs.alacritty = import ./alacritty-settings.nix;
-  programs.vscode = (import ./vscode-settings.nix { inherit pkgs; });
-  programs.fuzzel = (import ./fuzzel-settings.nix { inherit pkgs; });
-  programs.wlogout = import ./wlogout-settings.nix;
-  programs.direnv = import ./direnv-settings.nix;
-  programs.neovim = import ./nvim-settings.nix;
+  programs.waybar = (import ./common/waybar-settings.nix { inherit pkgs; });
+  programs.starship = import ./common/starship-settings.nix;
+  programs.tmux = (import ./common/tmux-settings.nix { inherit pkgs; });
+  programs.git = import ./common/git-settings.nix;
+  programs.zsh = import ./common/zsh-settings.nix;
+  programs.alacritty = import ./common/alacritty-settings.nix;
+  programs.vscode = (import ./common/vscode-settings.nix { inherit pkgs; });
+  programs.fuzzel = (import ./common/fuzzel-settings.nix { inherit pkgs; });
+  programs.wlogout = import ./common/wlogout-settings.nix;
+  programs.direnv = import ./common/direnv-settings.nix;
+  programs.neovim = import ./common/nvim-settings.nix;
 }
