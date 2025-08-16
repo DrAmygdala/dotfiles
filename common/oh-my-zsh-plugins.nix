@@ -1,7 +1,8 @@
 [
     "autojump"
-    "sudo"
+    "thefuck"
     "direnv"
     "kubectl"
     "gitignore"
+    "httpie"
 ]

@@ -25,4 +25,6 @@
     pkgs.copyq
     pkgs.betterdiscordctl
     pkgs.kdePackages.kate
+    pkgs.thefuck
+    pkgs.httpie
 ]
