@@ -6,16 +6,16 @@
     profiles.default = {
         enableExtensionUpdateCheck = true;
         enableUpdateCheck = true;
-        extensions = [
-            pkgs.vscode-extensions.bbenoist.nix
-                pkgs.vscode-extensions.bungcip.better-toml
-                pkgs.vscode-extensions.mikestead.dotenv
-                pkgs.vscode-extensions.grapecity.gc-excelviewer
-                pkgs.vscode-extensions.timonwong.shellcheck
-                pkgs.vscode-extensions.redhat.vscode-yaml
-                pkgs.vscode-extensions.ms-python.python
-                pkgs.vscode-extensions.ms-python.debugpy
-                pkgs.vscode-extensions.vscodevim.vim
+        extensions = with pkgs.vscode-extensions; [
+                tamasfe.even-better-toml
+                bbenoist.nix
+                mikestead.dotenv
+                grapecity.gc-excelviewer
+                timonwong.shellcheck
+                redhat.vscode-yaml
+                ms-python.python
+                ms-python.debugpy
+                vscodevim.vim
         ];
         userSettings = {
             "editor.renderWhitespace" = "all";
