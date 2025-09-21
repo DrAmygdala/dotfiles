@@ -55,4 +55,5 @@
   programs.wlogout = import ./common/wlogout-settings.nix;
   programs.direnv = import ./common/direnv-settings.nix;
   programs.neovim = (import ./common/nvim-settings.nix {inherit pkgs; });
+  programs.tealdeer = import ./common/tealdeer-settings.nix;
 }

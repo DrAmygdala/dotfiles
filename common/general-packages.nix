@@ -6,7 +6,6 @@
     pkgs.ripgrep
     pkgs.fd
     pkgs.tuc
-    pkgs.tealdeer
     pkgs.eza
     pkgs.bat
     pkgs.prettyping
