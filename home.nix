@@ -50,4 +50,5 @@
   programs.direnv = import ./common/direnv-settings.nix;
   programs.neovim = (import ./common/nvim-settings.nix {inherit pkgs; });
   programs.tealdeer = import ./common/tealdeer-settings.nix;
+  programs.ssh = import ./common/ssh-settings.nix;
 }
