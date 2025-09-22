@@ -16,6 +16,11 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
+      nixosConfigurations.kabir-laptop = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./configuration.nix
+        ];
+      };
       homeConfigurations = {
         kabir = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
