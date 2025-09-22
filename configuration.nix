@@ -89,7 +89,7 @@
   ];
 
   environment.shells = with pkgs; [
-    zsh
+    "/home/kabir/.nix-profile/bin/zsh"
   ];
 
   # This value determines the NixOS release from which the default
