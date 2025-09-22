@@ -37,6 +37,7 @@
   wayland.windowManager.hyprland = (import ./common/hyprland-settings.nix { inherit pkgs; });
   editorconfig = import ./common/editorconfig.nix;
   services.hyprpaper = import ./common/hyprpaper-settings.nix;
+  services.swaync = import ./common/swaync-settings.nix;
 
   programs.waybar = (import ./common/waybar-settings.nix { inherit pkgs; });
   programs.starship = import ./common/starship-settings.nix;
