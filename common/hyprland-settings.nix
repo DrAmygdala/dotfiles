@@ -3,6 +3,9 @@
 	enable = true;
     settings = {
         "$mod" = "SUPER";
+        monitor = [
+            "eDP-1, 2256x1504@60, auto, 1.6"
+        ];
         general = {
             gaps_in = 0;
             gaps_out = 0;
