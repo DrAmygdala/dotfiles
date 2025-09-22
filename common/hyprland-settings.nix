@@ -5,6 +5,7 @@
         "$mod" = "SUPER";
         monitor = [
             "eDP-1, 2256x1504@60, auto, 1.6"
+            ", preferred, auto, 1"
         ];
         general = {
             gaps_in = 0;
