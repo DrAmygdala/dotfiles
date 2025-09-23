@@ -54,6 +54,11 @@
             "CTRL ALT, J, resizeactive, 0 180"
 
             "CTRL $mod, J, togglesplit"
+
+            # Login etc
+            "CTRL SHIFT, L, exec, uwsm stop"
+            "CTRL SHIFT, S, exec, shutdown now"
+            "CTRL SHIFT, R, exec, shutdown -r now"
           ]
           ++ (
             # workspaces
