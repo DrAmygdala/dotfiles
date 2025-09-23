@@ -26,4 +26,5 @@
     pkgs.kdePackages.kate
     pkgs.thefuck
     pkgs.httpie
+    pkgs.brightnessctl
 ]

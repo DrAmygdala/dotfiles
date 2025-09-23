@@ -3,6 +3,9 @@
 	enable = true;
     settings = {
         "$mod" = "SUPER";
+        exec = [
+            "waybar"
+        ];
         monitor = [
             "eDP-1, 2256x1504@60, auto, 1.6"
             ", preferred, auto, 1"
@@ -46,6 +49,10 @@
             "CTRL ALT, J, resizeactive, 0 180"
 
             "CTRL $mod, J, togglesplit"
+
+            # Brightness
+            "$mod, Up, exec, brightnessctl set 5%+"
+            "$mod, Down, exec, brightnessctl set 5%-"
           ]
           ++ (
             # workspaces
