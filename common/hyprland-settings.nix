@@ -3,7 +3,7 @@
 	enable = true;
     settings = {
         "$mod" = "SUPER";
-        exec = [
+        exec-once = [
             "waybar"
         ];
         monitor = [
