@@ -14,6 +14,11 @@
             gaps_in = 0;
             gaps_out = 0;
         };
+        binde = [
+            # Brightness
+            ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+            ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+        ];
         bind =
           [
             "$mod, S, exec, alacritty"
@@ -49,10 +54,6 @@
             "CTRL ALT, J, resizeactive, 0 180"
 
             "CTRL $mod, J, togglesplit"
-
-            # Brightness
-            "$mod, Up, exec, brightnessctl set 5%+"
-            "$mod, Down, exec, brightnessctl set 5%-"
           ]
           ++ (
             # workspaces
