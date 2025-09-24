@@ -34,8 +34,9 @@
       wireplumber = {
         format = "{volume}% {icon}";
         format-icons = {
-          default = [ "" "" "" ];
+          default = [ "" "" ];
         };
+        format-muted = "";
       };
       cpu = {
         interval = 1;
