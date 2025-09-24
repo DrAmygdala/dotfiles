@@ -63,7 +63,7 @@
             warning = 30;
             critical = 15;
         };
-        format = "{capacity}%";
+        format = "{capacity}% {icon}";
         format-icons = ["" "" "" "" ""];
         max-length = 25;
       };
