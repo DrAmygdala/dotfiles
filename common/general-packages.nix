@@ -27,4 +27,5 @@
     pkgs.thefuck
     pkgs.httpie
     pkgs.brightnessctl
+    pkgs.networkmanagerapplet
 ]

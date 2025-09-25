@@ -5,6 +5,7 @@
         "$mod" = "SUPER";
         exec-once = [
             "waybar"
+            "nm-applet --indicator"
         ];
         monitor = [
             "eDP-1, 2256x1504@60, auto, 1.6"
@@ -18,6 +19,11 @@
             # Brightness
             ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
             ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+
+            # Volume
+            ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+"
+            ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%-"
+
         ];
         bind =
           [
@@ -59,6 +65,9 @@
             "CTRL SHIFT, L, exec, uwsm stop"
             "CTRL SHIFT, S, exec, shutdown now"
             "CTRL SHIFT, R, exec, shutdown -r now"
+
+            # Volume
+            ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
           ]
           ++ (
             # workspaces

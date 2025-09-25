@@ -21,6 +21,10 @@
 
   networking.hostName = "kabir-laptop"; # Define your hostname.
 
+  # Enable keyring
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.login.enableGnomeKeyring = true;
+
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -91,7 +95,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim
     git
   ];
 

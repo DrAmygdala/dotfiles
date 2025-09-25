@@ -12,19 +12,7 @@
       ];
       modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "network" "bluetooth" "wireplumber" "cpu" "memory" "battery" ];
-      network = {
-        interface = "wlp170s0";
-        format = "{ifname}";
-        format-wifi = "{essid} ";
-        format-ethernet = "{ipaddr}/{cidr} 󰊗";
-        format-disconnected = ""; # An empty format will hide the module.
-        tooltip-format = "{ifname} via {gwaddr} 󰊗";
-        tooltip-format-wifi = "{essid} ({signalStrength}%) ";
-        tooltip-format-ethernet = "{ifname} ";
-        tooltip-format-disconnected = "Disconnected";
-        max-length = 50;
-      };
+      modules-right = [ "tray" "bluetooth" "wireplumber" "cpu" "memory" "battery" ];
       clock = {
       	format = "{:%a, %d. %b  %H:%M}";
       };
