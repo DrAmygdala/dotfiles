@@ -39,6 +39,7 @@
   services.hyprpaper = import ./common/hyprpaper-settings.nix;
   services.swaync = import ./common/swaync-settings.nix;
   services.network-manager-applet.enable = true;
+  services.blueman-applet.enable = true;
 
   programs.waybar = (import ./common/waybar-settings.nix { inherit pkgs; });
   programs.starship = import ./common/starship-settings.nix;

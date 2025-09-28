@@ -12,7 +12,7 @@
       ];
       modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "tray" "bluetooth" "wireplumber" "cpu" "memory" "battery" ];
+      modules-right = [ "tray" "wireplumber" "cpu" "memory" "battery" ];
       clock = {
       	format = "{:%a, %d. %b  %H:%M}";
       };
