@@ -29,4 +29,5 @@
     pkgs.brightnessctl
     pkgs.networkmanagerapplet
     pkgs.standardnotes
+    pkgs.thunderbird
 ]
