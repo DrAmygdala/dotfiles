@@ -28,4 +28,5 @@
     pkgs.httpie
     pkgs.brightnessctl
     pkgs.networkmanagerapplet
+    pkgs.standardnotes
 ]
