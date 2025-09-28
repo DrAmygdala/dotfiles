@@ -30,4 +30,5 @@
     pkgs.networkmanagerapplet
     pkgs.standardnotes
     pkgs.thunderbird
+    pkgs.bitwarden-desktop
 ]
