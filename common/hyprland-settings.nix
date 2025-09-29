@@ -1,8 +1,9 @@
-{ pkgs, inputs }:
+{ pkgs }:
 {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    plugins = with pkgs.hyprlandPlugins; [
+        hy3
+    ];
     settings = {
         "$mod" = "SUPER";
         exec-once = [
@@ -16,6 +17,7 @@
         general = {
             gaps_in = 0;
             gaps_out = 0;
+            layout = "hy3";
         };
         binde = [
             # Brightness
@@ -34,21 +36,29 @@
             "$mod, W, exec, ${pkgs.wlogout}/bin/wlogout"
             "$mod, Q, killactive"
 
+            # Hyprland test
+            "ALT, z, hy3:makegroup, tab, toggle"
+
             # Move focus
-            "ALT, H, movefocus, l"
-            "ALT, J, movefocus, d"
-            "ALT, K, movefocus, u"
-            "ALT, L, movefocus, r"
+            "ALT, H, hy3:movefocus, l, visible, warp"
+            "ALT, J, hy3:movefocus, d, visible, warp"
+            "ALT, K, hy3:movefocus, u, visible, warp"
+            "ALT, L, hy3:movefocus, r, visible, warp"
+            "ALT + SHIFT, H, hy3:movefocus, l, , warp"
+            "ALT + SHIFT, J, hy3:movefocus, d, , warp"
+            "ALT + SHIFT, K, hy3:movefocus, u, , warp"
+            "ALT + SHIFT, L, hy3:movefocus, r, , warp"
+
 
             # Move workspace
             "$mod CTRL, L, workspace, e+1"
             "$mod CTRL, H, workspace, e-1"
 
             # Move window
-            "SUPER, H, movewindow, l"
-            "SUPER, J, movewindow, d"
-            "SUPER, K, movewindow, u"
-            "SUPER, L, movewindow, r"
+            "SUPER, H, hy3:movewindow, l"
+            "SUPER, J, hy3:movewindow, d"
+            "SUPER, K, hy3:movewindow, u"
+            "SUPER, L, hy3:movewindow, r"
 
             # Switch window
             "SUPER, Tab, cyclenext"
@@ -86,7 +96,7 @@
           bindm =
             [
             # Move/Resize windows with SUPER LMB/RMB and dragging
-            "SUPER, mouse:272, movewindow"
+            "SUPER, mouse:272, hy3:movewindow"
             "SUPER, mouse:273, resizewindow"
             ];
     };
