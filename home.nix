@@ -40,6 +40,7 @@
   services.swaync = import ./common/swaync-settings.nix;
   services.network-manager-applet.enable = true;
   services.blueman-applet.enable = true;
+  services.restic = import ./common/restic.nix;
 
   programs.waybar = (import ./common/waybar-settings.nix { inherit pkgs; });
   programs.starship = import ./common/starship-settings.nix;
