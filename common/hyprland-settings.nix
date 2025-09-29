@@ -19,6 +19,15 @@
             gaps_out = 0;
             layout = "hy3";
         };
+        plugin = {
+            hy3 = {
+                autotile = {
+                    enable = true;
+                    trigger_width = 800;
+                    trigger_height = 500;
+                };
+            };
+        };
         binde = [
             # Brightness
             ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
