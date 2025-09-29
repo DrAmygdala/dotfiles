@@ -2,13 +2,20 @@
   description = "Home Manager configuration of kabir";
 
   inputs = {
-    # Specify the source of Home Manager and Nixpkgs.
+    # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+
+    # Home Manager
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Misc
     isd.url = "github:isd-project/isd";
+
+    # Hyprland
+    hyprland.url = "github:hyprwm/Hyprland?submodules=1&ref=v0.51.0";
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
@@ -17,6 +24,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       nixosConfigurations.kabir-laptop = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
         ];
