@@ -60,6 +60,7 @@
   style = ''
   * {
   	border: none;
+    color: white
   }
 
   window#waybar {
