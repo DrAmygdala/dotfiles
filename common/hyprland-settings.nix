@@ -5,7 +5,18 @@
         hy3
     ];
     settings = {
-        "$mod" = "SUPER";
+        # n - navigation
+        # m - move
+        # w - workspace
+        # wd - window
+        # t - tab
+        "$nw" = "CTRL SUPER";
+        "$nwd" = "CTRL";
+        "$nt" = "CTRL SHIFT";
+        "$mw" = "ALT CTRL";
+        "$mwd" = "ALT SUPER";
+        "$mt" = "ALT SHIFT";
+        "$cmd" = "ALT";
         exec-once = [
             "waybar"
             "nm-applet --indicator"
@@ -40,34 +51,35 @@
         ];
         bind =
           [
-            "$mod, S, exec, alacritty"
-            "$mod, SPACE, exec, ${pkgs.fuzzel}/bin/fuzzel"
-            "$mod, W, exec, ${pkgs.wlogout}/bin/wlogout"
-            "$mod, Q, killactive"
+            "$cmd, S, exec, alacritty"
+            "$cmd, SPACE, exec, ${pkgs.fuzzel}/bin/fuzzel"
+            "$cmd, W, exec, ${pkgs.wlogout}/bin/wlogout"
+            "$cmd, Q, killactive"
 
-            # Hyprland test
-            "ALT, z, hy3:makegroup, tab, toggle"
+            # Tabs
+            "$cmd, z, hy3:makegroup, tab, toggle"
 
             # Move focus
-            "ALT, H, hy3:movefocus, l, visible, warp"
-            "ALT, J, hy3:movefocus, d, visible, warp"
-            "ALT, K, hy3:movefocus, u, visible, warp"
-            "ALT, L, hy3:movefocus, r, visible, warp"
-            "ALT + SHIFT, H, hy3:movefocus, l, , warp"
-            "ALT + SHIFT, J, hy3:movefocus, d, , warp"
-            "ALT + SHIFT, K, hy3:movefocus, u, , warp"
-            "ALT + SHIFT, L, hy3:movefocus, r, , warp"
+            "$nwd, H, hy3:movefocus, l, visible, warp"
+            "$nwd, J, hy3:movefocus, d, visible, warp"
+            "$nwd, K, hy3:movefocus, u, visible, warp"
+            "$nwd, L, hy3:movefocus, r, visible, warp"
+            "$nt, H, hy3:movefocus, l, , warp"
+            "$nt, J, hy3:movefocus, d, , warp"
+            "$nt, K, hy3:movefocus, u, , warp"
+            "$nt, L, hy3:movefocus, r, , warp"
 
-
-            # Move workspace
-            "$mod CTRL, L, workspace, e+1"
-            "$mod CTRL, H, workspace, e-1"
+            # Navigate workspace
+            "$nw, L, workspace, e+1"
+            "$nw, H, workspace, e-1"
+            "$mw, L, movetoworkspace, e+1"
+            "$mw, H, movetoworkspace, e-1"
 
             # Move window
-            "SUPER, H, hy3:movewindow, l"
-            "SUPER, J, hy3:movewindow, d"
-            "SUPER, K, hy3:movewindow, u"
-            "SUPER, L, hy3:movewindow, r"
+            "$mwd, H, hy3:movewindow, l"
+            "$mwd, J, hy3:movewindow, d"
+            "$mwd, K, hy3:movewindow, u"
+            "$mwd, L, hy3:movewindow, r"
 
             # Switch window
             "SUPER, Tab, cyclenext"
@@ -75,17 +87,15 @@
             "ALT, Tab, workspace, previous" # Cycle recent workspaces
 
             # Resize window
-            "CTRL ALT, H, resizeactive, -240 0"
-            "CTRL ALT, L, resizeactive, 180 0"
-            "CTRL ALT, K, resizeactive, 0 -240"
-            "CTRL ALT, J, resizeactive, 0 180"
-
-            "CTRL $mod, J, togglesplit"
+            #"CTRL ALT, H, resizeactive, -240 0"
+            #"CTRL ALT, L, resizeactive, 180 0"
+            #"CTRL ALT, K, resizeactive, 0 -240"
+            #"CTRL ALT, J, resizeactive, 0 180"
 
             # Login etc
-            "CTRL SHIFT, L, exec, uwsm stop"
-            "CTRL SHIFT, S, exec, shutdown now"
-            "CTRL SHIFT, R, exec, shutdown -r now"
+            "$cmd, L, exec, uwsm stop"
+            "$cmd, S, exec, shutdown now"
+            "$cmd, R, exec, shutdown -r now"
 
             # Volume
             ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
@@ -96,8 +106,8 @@
             builtins.concatLists (builtins.genList (i:
                 let ws = i + 1;
                 in [
-                  "$mod, code:1${toString i}, workspace, ${toString ws}"
-                  "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+                  "$nw, code:1${toString i}, workspace, ${toString ws}"
+                  "$mw, code:1${toString i}, movetoworkspace, ${toString ws}"
                 ]
               )
               9)
@@ -105,8 +115,8 @@
           bindm =
             [
             # Move/Resize windows with SUPER LMB/RMB and dragging
-            "SUPER, mouse:272, hy3:movewindow"
-            "SUPER, mouse:273, resizewindow"
+            "$cmd, mouse:272, hy3:movewindow"
+            "$cmd, mouse:273, resizewindow"
             ];
     };
 }
