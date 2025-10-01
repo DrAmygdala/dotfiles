@@ -93,9 +93,9 @@
             #"CTRL ALT, J, resizeactive, 0 180"
 
             # Login etc
-            "$cmd, L, exec, uwsm stop"
-            "$cmd, S, exec, shutdown now"
-            "$cmd, R, exec, shutdown -r now"
+            "$cmd, I, exec, uwsm stop"
+            "$cmd, O, exec, shutdown now"
+            "$cmd, P, exec, shutdown -r now"
 
             # Volume
             ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
