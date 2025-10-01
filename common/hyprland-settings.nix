@@ -19,7 +19,6 @@
         "$cmd" = "ALT";
         exec-once = [
             "waybar"
-            "nm-applet --indicator"
         ];
         monitor = [
             "eDP-1, 2256x1504@60, auto, 1.6"
