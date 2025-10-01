@@ -33,4 +33,5 @@
     pkgs.bitwarden-desktop
     pkgs.libreoffice-fresh
     pkgs.obsidian
+    pkgs.logseq
 ]
