@@ -43,6 +43,7 @@
   services.restic = import ./common/restic.nix;
   services.psd.enable = true;
   services.copyq.enable = true;
+  services.wlsunset = import ./common/wlsunset-settings.nix;
 
   programs.waybar = (import ./common/waybar-settings.nix { inherit pkgs; });
   programs.starship = import ./common/starship-settings.nix;
