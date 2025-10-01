@@ -34,7 +34,7 @@
     (import ./common/zsh-packages.nix { inherit pkgs; })
   ];
 
-  wayland.windowManager.hyprland = (import ./common/hyprland-settings.nix { inherit pkgs; });
+  wayland.windowManager.hyprland = (import ./common/hyprland-settings.nix { inherit pkgs inputs; });
   editorconfig = import ./common/editorconfig.nix;
   services.hyprpaper = import ./common/hyprpaper-settings.nix;
   services.swaync = import ./common/swaync-settings.nix;
