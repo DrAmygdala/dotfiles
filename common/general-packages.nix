@@ -34,4 +34,5 @@
     pkgs.libreoffice-fresh
     pkgs.obsidian
     pkgs.logseq
+    pkgs.discord
 ]
