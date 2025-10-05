@@ -35,4 +35,5 @@
     pkgs.obsidian
     pkgs.logseq
     pkgs.discord
+    pkgs.jq
 ]
