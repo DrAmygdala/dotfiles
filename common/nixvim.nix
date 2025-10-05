@@ -52,5 +52,6 @@
         lualine.enable = true;
         telescope.enable = true;
         which-key.enable = true;
+        ts-comments.enable = true;
     };
 }
