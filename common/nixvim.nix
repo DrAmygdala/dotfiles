@@ -57,5 +57,8 @@
         mini-ai.enable = true;
         neo-tree.enable = true;
     };
-    colorschemes.catppuccin.enable = true;
+    colorschemes.catppuccin = {
+        enable = true;
+        settings.background.dark = "mocha";
+    };
 }
