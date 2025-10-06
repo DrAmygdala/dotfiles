@@ -26,4 +26,5 @@
 			};
 		};
 	};
+    theme = "catppuccin_mocha";
 }
