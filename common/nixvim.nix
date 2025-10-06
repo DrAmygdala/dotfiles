@@ -59,6 +59,9 @@
     };
     colorschemes.catppuccin = {
         enable = true;
-        settings.background.dark = "mocha";
+        settings = {
+            background.dark = "mocha";
+            transparent_background = true;
+        };
     };
 }
