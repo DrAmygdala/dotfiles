@@ -53,5 +53,7 @@
         telescope.enable = true;
         which-key.enable = true;
         ts-comments.enable = true;
+        mini-pairs.enable = true;
+        mini-ai.enable = true;
     };
 }
