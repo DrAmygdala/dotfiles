@@ -55,5 +55,7 @@
         ts-comments.enable = true;
         mini-pairs.enable = true;
         mini-ai.enable = true;
+        neo-tree.enable = true;
     };
+    colorschemes.catppuccin.enable = true;
 }
