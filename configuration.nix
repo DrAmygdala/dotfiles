@@ -28,6 +28,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Wireguard
+  networking.firewall.allowedUDPPorts = [ 51820 ];
+  services.resolved.enable = true;
+
   # Enable Bluetooth
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;

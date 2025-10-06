@@ -36,4 +36,5 @@
     pkgs.logseq
     pkgs.discord
     pkgs.jq
+    pkgs.wireguard-tools
 ]
