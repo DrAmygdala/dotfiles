@@ -3,7 +3,7 @@
 
   inputs = {
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
 
     # Home Manager
     home-manager = {
@@ -23,8 +23,7 @@
 
     # Nixvim
     nixvim = {
-        url = "github:nix-community/nixvim/nixos-25.05";
-        inputs.nixpkgs.follows = "nixpkgs";
+        url = "github:nix-community/nixvim";
     };
   };
 
@@ -45,7 +44,7 @@
 
           # Specify your home configuration modules here, for example,
           # the path to your home.nix.
-          modules = [ ./home.nix nixvim.homeManagerModules.nixvim ];
+          modules = [ ./home.nix nixvim.homeModules.nixvim ];
 
           # Optionally use extraSpecialArgs
           # to pass through arguments to home.nix
