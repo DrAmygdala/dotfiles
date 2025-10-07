@@ -53,6 +53,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
+    package = pkgs.kdePackages.sddm;
   };
 
   # Configure keymap in X11
@@ -127,4 +128,15 @@
   fonts.packages = with pkgs; [
     nerd-fonts.hack
   ];
+
+  # Catppuccin
+  catppuccin = {
+    accent = "maroon";
+    flavor = "mocha";
+    sddm = {
+        enable = true;
+    };
+    tty.enable = true;
+    grub.enable = true;
+  };
 }

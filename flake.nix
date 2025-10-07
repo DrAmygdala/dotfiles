@@ -25,9 +25,11 @@
     nixvim = {
         url = "github:nix-community/nixvim";
     };
+
+    catppuccin.url = "github:catppuccin/nix/release-25.05";
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, ... }@inputs:
+  outputs = { nixpkgs, home-manager, nixvim, catppuccin, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -36,6 +38,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
+          catppuccin.nixosModules.catppuccin
         ];
       };
       homeConfigurations = {
