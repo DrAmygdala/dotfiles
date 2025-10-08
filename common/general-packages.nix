@@ -37,4 +37,5 @@
     pkgs.discord
     pkgs.jq
     pkgs.wireguard-tools
+    pkgs.evince
 ]
