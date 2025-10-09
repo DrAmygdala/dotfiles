@@ -35,7 +35,7 @@
   ];
 
   gtk = (import ./common/gtk-settings.nix { inherit pkgs; });
-
+  xdg = import ./common/xdg-settings.nix;
 
   wayland.windowManager.hyprland = (import ./common/hyprland-settings.nix { inherit pkgs inputs; });
   editorconfig = import ./common/editorconfig.nix;
