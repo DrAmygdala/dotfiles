@@ -30,7 +30,7 @@
                 nixd = {
                     enable = true;
                 };
-                pyright.enable = true;
+                pyrefly.enable = true;
                 bashls.enable = true;
             };
         };
