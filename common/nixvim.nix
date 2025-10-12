@@ -2,6 +2,118 @@
     enable = true;
     viAlias = true;
     vimAlias = true;
+    globals.mapleader = " ";
+    keymaps = let
+        default_opts = {
+            silent = true;
+            noremap = true;
+        };
+    in
+        [
+            # NeoTree
+            {
+                action = "<cmd>Neotree toggle<CR>";
+                key = "<C-b>";
+                mode = "n";
+                options = {
+                    desc = "Toggle Tree view";
+                } // default_opts;
+            }
+
+            # Resize
+            {
+                action = "<cmd>vertical resize -2<CR>";
+                key = "<C-Left>";
+                mode = "n";
+                options = {
+                    desc = "Resize down";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>vertical resize +2<CR>";
+                key = "<C-Right>";
+                mode = "n";
+                options = {
+                    desc = "Resize up";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>resize -2<CR>";
+                key = "<C-Down>";
+                mode = "n";
+                options = {
+                    desc = "Resize down";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>resize +2<CR>";
+                key = "<C-Up>";
+                mode = "n";
+                options = {
+                    desc = "Resize up";
+                } // default_opts;
+            }
+
+            # Movement
+            {
+                action = "<C-w>h";
+                key = "<C-h>";
+                mode = "n";
+                options = {
+                    desc = "Move left";
+                } // default_opts;
+            }
+            {
+                action = "<C-w>j";
+                key = "<C-j>";
+                mode = "n";
+                options = {
+                    desc = "Move down";
+                } // default_opts;
+            }
+            {
+                action = "<C-w>k";
+                key = "<C-k>";
+                mode = "n";
+                options = {
+                    desc = "Move up";
+                } // default_opts;
+            }
+            {
+                action = "<C-w>l";
+                key = "<C-l>";
+                mode = "n";
+                options = {
+                    desc = "Move right";
+                } // default_opts;
+            }
+            {
+                action = "gt";
+                key = "<leader>l";
+                mode = "n";
+                options = {
+                    desc = "Move right";
+                } // default_opts;
+            }
+            {
+                action = "gT";
+                key = "<leader>h";
+                mode = "n";
+                options = {
+                    desc = "Move right";
+                } // default_opts;
+            }
+
+            # Telescope
+            {
+                action = "<cmd>Telescope find_files<CR>";
+                key = "<leader>ff";
+                mode = "n";
+                options = {
+                    desc = "Find files";
+                } // default_opts;
+            }
+        ];
     opts = {
         mouse = "a";
         termguicolors = true;
