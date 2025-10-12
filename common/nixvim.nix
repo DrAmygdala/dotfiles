@@ -81,19 +81,29 @@
                 } // default_opts;
             }
             {
-                action = "gt";
+                action = "<cmd>tabnext";
                 key = "<leader>l";
                 mode = "n";
                 options = {
-                    desc = "Move right";
+                    desc = "Move tab right";
                 } // default_opts;
             }
             {
-                action = "gT";
+                action = "<cmd>tabprevious";
                 key = "<leader>h";
                 mode = "n";
                 options = {
-                    desc = "Move right";
+                    desc = "Move tab left";
+                } // default_opts;
+            }
+
+            # Tabs
+            {
+                action = "<cmd>tabnew";
+                key = "<leader><Tab>n";
+                mode = "n";
+                options = {
+                    desc = "Create new tab";
                 } // default_opts;
             }
 
