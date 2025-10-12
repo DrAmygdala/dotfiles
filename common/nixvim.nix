@@ -21,43 +21,36 @@
             }
 
             # Resize
+            # From the persepctive of the top left corner
             {
                 action = "<cmd>vertical resize -2<CR>";
                 key = "<C-Left>";
                 mode = "n";
-                options = {
-                    desc = "Resize down";
-                } // default_opts;
+                options = default_opts;
             }
             {
                 action = "<cmd>vertical resize +2<CR>";
                 key = "<C-Right>";
                 mode = "n";
-                options = {
-                    desc = "Resize up";
-                } // default_opts;
-            }
-            {
-                action = "<cmd>resize -2<CR>";
-                key = "<C-Down>";
-                mode = "n";
-                options = {
-                    desc = "Resize down";
-                } // default_opts;
+                options = default_opts;
             }
             {
                 action = "<cmd>resize +2<CR>";
+                key = "<C-Down>";
+                mode = "n";
+                options = default_opts;
+            }
+            {
+                action = "<cmd>resize -2<CR>";
                 key = "<C-Up>";
                 mode = "n";
-                options = {
-                    desc = "Resize up";
-                } // default_opts;
+                options = default_opts;
             }
 
             # Movement
             {
                 action = "<C-w>h";
-                key = "<C-h>";
+                key = "<A-h>";
                 mode = "n";
                 options = {
                     desc = "Move left";
@@ -65,7 +58,7 @@
             }
             {
                 action = "<C-w>j";
-                key = "<C-j>";
+                key = "<A-j>";
                 mode = "n";
                 options = {
                     desc = "Move down";
@@ -73,7 +66,7 @@
             }
             {
                 action = "<C-w>k";
-                key = "<C-k>";
+                key = "<A-k>";
                 mode = "n";
                 options = {
                     desc = "Move up";
@@ -81,7 +74,7 @@
             }
             {
                 action = "<C-w>l";
-                key = "<C-l>";
+                key = "<A-l>";
                 mode = "n";
                 options = {
                     desc = "Move right";
