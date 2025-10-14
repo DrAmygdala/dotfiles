@@ -1,6 +1,7 @@
 { pkgs }:
 {
   enable = true;
+  systemd.enable = true;
   settings = {
     mainBar = {
       layer = "top";
@@ -10,7 +11,7 @@
         "eDP-1"
         "HDMI-A-1"
       ];
-      modules-left = [ "hyprland/workspaces" ];
+      modules-left = [ "sway/workspaces" ];
       modules-center = [ "clock" ];
       modules-right = [ "tray" "wireplumber" "cpu" "memory" "battery" ];
       clock = {
