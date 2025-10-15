@@ -81,7 +81,71 @@
                 } // default_opts;
             }
             {
-                action = "<cmd>tabnext";
+                action = "<C-\\><C-N><C-w>l";
+                key = "<A-l>";
+                mode = "i";
+                options = {
+                    desc = "Move right in insert mode";
+                } // default_opts;
+            }
+            {
+                action = "<C-\\><C-N><C-w>k";
+                key = "<A-k>";
+                mode = "i";
+                options = {
+                    desc = "Move up in insert mode";
+                } // default_opts;
+            }
+            {
+                action = "<C-\\><C-N><C-w>j";
+                key = "<A-j>";
+                mode = "i";
+                options = {
+                    desc = "Move down in insert mode";
+                } // default_opts;
+            }
+            {
+                action = "<C-\\><C-N><C-w>h";
+                key = "<A-h>";
+                mode = "i";
+                options = {
+                    desc = "Move left in insert mode";
+                } // default_opts;
+            }
+            {
+                action = "<C-\\><C-N><C-w>l";
+                key = "<A-l>";
+                mode = "t";
+                options = {
+                    desc = "Move right in terminal mode";
+                } // default_opts;
+            }
+            {
+                action = "<C-\\><C-N><C-w>k";
+                key = "<A-k>";
+                mode = "t";
+                options = {
+                    desc = "Move up in terminal mode";
+                } // default_opts;
+            }
+            {
+                action = "<C-\\><C-N><C-w>j";
+                key = "<A-j>";
+                mode = "t";
+                options = {
+                    desc = "Move down in terminal mode";
+                } // default_opts;
+            }
+            {
+                action = "<C-\\><C-N><C-w>h";
+                key = "<A-h>";
+                mode = "t";
+                options = {
+                    desc = "Move left in terminal mode";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>tabnext<CR>";
                 key = "<leader>l";
                 mode = "n";
                 options = {
@@ -89,7 +153,7 @@
                 } // default_opts;
             }
             {
-                action = "<cmd>tabprevious";
+                action = "<cmd>tabprevious<CR>";
                 key = "<leader>h";
                 mode = "n";
                 options = {
@@ -97,17 +161,15 @@
                 } // default_opts;
             }
 
-            # Tabs
+            # Telescope
             {
-                action = "<cmd>tabnew";
-                key = "<leader><Tab>n";
+                action = "<cmd>Telescope live_grep<CR>";
+                key = "<leader>fg";
                 mode = "n";
                 options = {
-                    desc = "Create new tab";
+                    desc = "Find files";
                 } // default_opts;
             }
-
-            # Telescope
             {
                 action = "<cmd>Telescope find_files<CR>";
                 key = "<leader>ff";
@@ -170,7 +232,11 @@
         ts-comments.enable = true;
         mini-pairs.enable = true;
         mini-ai.enable = true;
-        neo-tree.enable = true;
+        neo-tree = {
+            enable = true;
+            closeIfLastWindow = true;
+            filesystem.filteredItems.visible = true;
+        };
     };
     colorschemes.catppuccin = {
         enable = true;
