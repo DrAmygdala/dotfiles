@@ -37,7 +37,7 @@
   gtk = (import ./common/gtk-settings.nix { inherit pkgs; });
   xdg = import ./common/xdg-settings.nix;
 
-  wayland.windowManager.sway = (import ./common/sway-settings.nix { inherit pkgs; });
+  wayland.windowManager.sway = (import ./common/sway-settings.nix { inherit pkgs lib; });
   editorconfig = import ./common/editorconfig.nix;
   services.hyprpaper = import ./common/hyprpaper-settings.nix;
   services.swaync = import ./common/swaync-settings.nix;
