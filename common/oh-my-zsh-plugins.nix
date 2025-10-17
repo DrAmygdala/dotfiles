@@ -5,4 +5,5 @@
     "kubectl"
     "gitignore"
     "httpie"
+    "gh"
 ]

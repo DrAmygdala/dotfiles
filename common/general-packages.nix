@@ -38,4 +38,5 @@
     pkgs.jq
     pkgs.wireguard-tools
     pkgs.evince
+    pkgs.gh
 ]
