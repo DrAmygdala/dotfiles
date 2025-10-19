@@ -234,8 +234,10 @@
         mini-ai.enable = true;
         neo-tree = {
             enable = true;
-            closeIfLastWindow = true;
-            filesystem.filteredItems.visible = true;
+            settings = {
+                close_if_last_window = true;
+                filesystem.filtered_items.visible = true;
+            };
         };
     };
     colorschemes.catppuccin = {
