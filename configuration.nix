@@ -45,7 +45,13 @@
   services.power-profiles-daemon.enable = false;
   services.tlp.enable = true;
   services.thermald.enable = true;
-  services.fwupd.enable = true;
+  services.fwupd = {
+    enable = true;
+    extraRemotes = [ "lvfs-testing" ];
+    uefiCapsuleSettings = {
+        DisableCapsuleUpdateOnDisk = true;
+    };
+  };
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
