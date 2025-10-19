@@ -49,7 +49,10 @@
     btop.enable = true;
     # sway.enable = true;
     # cursors.enable = true;
-    # thunderbird.enable = true;
+    thunderbird = {
+        enable = true;
+        profile = "primary";
+    };
   };
   gtk = (import ./common/gtk-settings.nix { inherit pkgs; });
   xdg = import ./common/xdg-settings.nix;
@@ -65,6 +68,7 @@
   services.copyq.enable = true;
   services.wlsunset = import ./common/wlsunset-settings.nix;
 
+  programs.thunderbird = import ./common/thunderbird-settings.nix;
   programs.waybar = (import ./common/waybar-settings.nix { inherit pkgs; });
   programs.starship = import ./common/starship-settings.nix;
   programs.tmux = (import ./common/tmux-settings.nix { inherit pkgs; });

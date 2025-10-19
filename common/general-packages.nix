@@ -28,7 +28,6 @@
     pkgs.brightnessctl
     pkgs.networkmanagerapplet
     pkgs.standardnotes
-    pkgs.thunderbird
     pkgs.bitwarden-desktop
     pkgs.libreoffice-fresh
     pkgs.obsidian
