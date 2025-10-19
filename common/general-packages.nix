@@ -1,6 +1,6 @@
-{ pkgs, inputs }:
+{ pkgs }:
 [
-    inputs.isd.packages.${pkgs.system}.default
+    pkgs.isd
     pkgs.lshw
     pkgs.dmidecode
     pkgs.btop

@@ -11,15 +11,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Misc
-    isd.url = "github:isd-project/isd";
-
     # Nixvim
     nixvim = {
         url = "github:nix-community/nixvim";
     };
 
-    catppuccin.url = "github:catppuccin/nix";
+    catppuccin = {
+        url = "github:catppuccin/nix";
+    };
   };
 
   outputs = { nixpkgs, home-manager, nixvim, catppuccin, ... }@inputs:
