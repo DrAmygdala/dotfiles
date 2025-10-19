@@ -1,6 +1,5 @@
 [
     "autojump"
-    "thefuck"
     "direnv"
     "kubectl"
     "gitignore"
