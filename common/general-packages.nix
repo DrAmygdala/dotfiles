@@ -1,6 +1,8 @@
 { pkgs, inputs }:
 [
     inputs.isd.packages.${pkgs.system}.default
+    pkgs.lshw
+    pkgs.dmidecode
     pkgs.btop
     pkgs.fzf
     pkgs.ripgrep
