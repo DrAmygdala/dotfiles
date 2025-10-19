@@ -1,7 +1,7 @@
 { pkgs, inputs }:
 [
     inputs.isd.packages.${pkgs.system}.default
-    pkgs.htop
+    pkgs.btop
     pkgs.fzf
     pkgs.ripgrep
     pkgs.fd
@@ -19,7 +19,7 @@
     pkgs.tree
     pkgs.lnav
     pkgs.fuzzel
-    pkgs.ranger
+    pkgs.yazi
     pkgs.xfce.thunar
     pkgs.copyq
     pkgs.betterdiscordctl
