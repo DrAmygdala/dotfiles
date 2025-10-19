@@ -59,7 +59,6 @@
 
   wayland.windowManager.sway = (import ./common/sway-settings.nix { inherit pkgs lib; });
   editorconfig = import ./common/editorconfig.nix;
-  services.hyprpaper = import ./common/hyprpaper-settings.nix;
   services.swaync = import ./common/swaync-settings.nix;
   services.network-manager-applet.enable = true;
   services.blueman-applet.enable = true;

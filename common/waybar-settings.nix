@@ -17,9 +17,6 @@
       clock = {
       	format = "{:%a, %d. %b  %H:%M}";
       };
-      "hyprland/workspaces" = {
-        move-to-monitor = true;
-      };
       wireplumber = {
         format = "{volume}% {icon}";
         format-icons = {

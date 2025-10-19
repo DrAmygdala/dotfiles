@@ -11,13 +11,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Hyprland
-    hyprland.url = "github:hyprwm/Hyprland?submodules=1&ref=v0.51.0";
-    hy3 = {
-        url = "github:outfoxxed/hy3?ref=hl0.51.0";
-        inputs.hyprland.follows = "hyprland";
-    };
-
     # Misc
     isd.url = "github:isd-project/isd";
 
