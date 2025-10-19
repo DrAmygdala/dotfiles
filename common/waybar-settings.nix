@@ -58,26 +58,4 @@
       };
     };
   };
-  style = ''
-  * {
-  	border: none;
-    color: white
-  }
-
-  window#waybar {
-	background-color: transparent
-  }
-
-  .module {
-    padding: 0px 5px 0px 5px;
-  }
-
-  .modules-left,
-  .modules-center,
-  .modules-right {
-	border-radius: 15px;
-    padding: 0px 25px 0px 25px;
-    background-color: #000000;
-  }
-  '';
 }

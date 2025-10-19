@@ -34,6 +34,23 @@
     (import ./common/zsh-packages.nix { inherit pkgs; })
   ];
 
+  catppuccin = {
+    flavor = "mocha";
+    accent = "maroon";
+    alacritty.enable = true;
+    waybar.enable = true;
+    swaync.enable = true;
+    eza.enable = true;
+    fuzzel.enable = true;
+    delta.enable = true;
+    k9s.enable = true;
+    zsh-syntax-highlighting.enable = true;
+    yazi.enable = true;
+    btop.enable = true;
+    # sway.enable = true;
+    # cursors.enable = true;
+    # thunderbird.enable = true;
+  };
   gtk = (import ./common/gtk-settings.nix { inherit pkgs; });
   xdg = import ./common/xdg-settings.nix;
 

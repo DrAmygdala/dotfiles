@@ -26,7 +26,7 @@
         url = "github:nix-community/nixvim";
     };
 
-    catppuccin.url = "github:catppuccin/nix/release-25.05";
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = { nixpkgs, home-manager, nixvim, catppuccin, ... }@inputs:
@@ -47,7 +47,11 @@
 
           # Specify your home configuration modules here, for example,
           # the path to your home.nix.
-          modules = [ ./home.nix nixvim.homeModules.nixvim ];
+          modules = [
+            ./home.nix
+            nixvim.homeModules.nixvim
+            catppuccin.homeModules.catppuccin
+          ];
 
           # Optionally use extraSpecialArgs
           # to pass through arguments to home.nix

@@ -6,31 +6,8 @@
     delta = {
       enable = true;
       options = {
-        decorations = {
-          commit-decoration-style = "blue ol";
-          commit-style = "raw";
-          file-style = "bold cyan";
-          file-decoration-style = "blue ol";
-          hunk-header-decoration-style = "blue ul";
-          hunk-header-file-style = "red";
-          hunk-header-line-number-style = "#067a00";
-          hunk-header-style = "file line-number syntax";
-        };
-        unobtrusive-line-numbers = {
-          line-numbers = "true";
-          line-numbers-minus-style = "#444444";
-          line-numbers-zero-style = "#444444";
-          line-numbers-plus-style = "#444444";
-          line-numbers-left-format = "{nm:>4}┊";
-          line-numbers-right-format = "{np:>4}│";
-          line-numbers-left-style = "blue";
-          line-numbers-right-style = "blue";
-        };
-        features = "decorations unobtrusive-line-numbers";
-        whitespace-error-style = "22 reverse";
         navigate = true;
         side-by-side = true;
-        syntax-theme = "Dracula";
       };
     };
     attributes = [
