@@ -204,11 +204,22 @@
         lsp = {
             enable = true;
             servers = {
-                nixd = {
-                    enable = true;
-                };
+                nixd.enable = true;
                 pyrefly.enable = true;
                 bashls.enable = true;
+                yamlls = {
+                    enable = true;
+                    extraOptions = {
+                        settings = {
+                            redhat.telemetry.enabled = false;
+                            yaml.schemas = {
+                                "https://www.schemastore.org/github-workflow.json" = ".github/workflows/*";
+                                "https://www.schemastore.org/github-issue-forms.json" = ".github/ISSUE_TEMPLATE/*";
+                                "https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json" = "*{,docker-}compose*.{yml,yaml}";
+                            };
+                        };
+                    };
+                };
             };
         };
         cmp = {
