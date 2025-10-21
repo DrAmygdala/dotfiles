@@ -53,10 +53,6 @@
     };
   };
 
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
@@ -110,7 +106,7 @@
     git
   ];
 
-  environment.shells = with pkgs; [
+  environment.shells = [
     "/home/kabir/.nix-profile/bin/zsh"
   ];
 
