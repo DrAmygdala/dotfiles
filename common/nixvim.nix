@@ -207,6 +207,7 @@
                 nixd.enable = true;
                 pyrefly.enable = true;
                 bashls.enable = true;
+                marksman.enable = true;
                 yamlls = {
                     enable = true;
                     extraOptions = {
