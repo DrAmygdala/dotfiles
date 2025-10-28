@@ -16,6 +16,7 @@
         url = "github:nix-community/nixvim";
     };
 
+    # Catppuccin
     catppuccin = {
         url = "github:catppuccin/nix";
     };
@@ -44,17 +45,6 @@
             nixvim.homeModules.nixvim
             catppuccin.homeModules.catppuccin
           ];
-
-          # Optionally use extraSpecialArgs
-          # to pass through arguments to home.nix
-	      extraSpecialArgs = { inherit inputs; };
-        };
-        work = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-
-          # Specify your home configuration modules here, for example,
-          # the path to your home.nix.
-          modules = [ ./work.nix ];
 
           # Optionally use extraSpecialArgs
           # to pass through arguments to home.nix
