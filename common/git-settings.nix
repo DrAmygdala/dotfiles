@@ -3,13 +3,6 @@
     # - https://github.com/alexkaratarakis/gitattributes
     # - https://github.com/github/gitignore
     enable = true;
-    delta = {
-      enable = true;
-      options = {
-        navigate = true;
-        side-by-side = true;
-      };
-    };
     attributes = [
       # Common settings that generally should always be used with your language specific settings
       # Source: https://github.com/alexkaratarakis/gitattributes
@@ -94,7 +87,8 @@
       ".gitignore     export-ignore"
       ".gitkeep       export-ignore"
     ];
-    aliases = {
+    settings = {
+      alias = {
       co = "checkout";
       ci = "commit";
       ls = "log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate";
@@ -130,7 +124,6 @@
         ship = "town ship";
         sync = "town sync";
     };
-    extraConfig = {
       core = {
         editor = "nvim";
       };

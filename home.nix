@@ -67,6 +67,7 @@
   services.copyq.enable = true;
   services.wlsunset = import ./common/wlsunset-settings.nix;
 
+  programs.delta = import ./common/delta-settings.nix;
   programs.thunderbird = import ./common/thunderbird-settings.nix;
   programs.waybar = (import ./common/waybar-settings.nix { inherit pkgs; });
   programs.starship = import ./common/starship-settings.nix;
