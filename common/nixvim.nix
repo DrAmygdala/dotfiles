@@ -178,6 +178,88 @@
                     desc = "Find files";
                 } // default_opts;
             }
+
+            # Debugging
+            {
+                action = "<cmd>DapToggleBreakpoint<CR>";
+                key = "<leader>dbb";
+                mode = "n";
+                options = {
+                    desc = "Toggle breakpoint";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>DapContinue<CR>";
+                key = "<leader>dc";
+                mode = "n";
+                options = {
+                    desc = "Debugger Continue";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>lua require('dap').run_to_cursor()<CR>";
+                key = "<leader>dC";
+                mode = "n";
+                options = {
+                    desc = "Debugger continue to cursor";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>DapRestartFrame<CR>";
+                key = "<leader>dh";
+                mode = "n";
+                options = {
+                    desc = "Restart frame";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>DapStepInto<CR>";
+                key = "<leader>dj";
+                mode = "n";
+                options = {
+                    desc = "Step into";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>DapStepOut<CR>";
+                key = "<leader>dk";
+                mode = "n";
+                options = {
+                    desc = "Step out";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>DapStepOver<CR>";
+                key = "<leader>dl";
+                mode = "n";
+                options = {
+                    desc = "Step over";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>lua require('dapui').toggle()<CR>";
+                key = "<leader>dd";
+                mode = "n";
+                options = {
+                    desc = "Togle Dap UI";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>";
+                key = "<leader>dbc";
+                mode = "n";
+                options = {
+                    desc = "Set conditional breakpoint";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message (supports variable interpolation within the message with {foo}): '))<CR>";
+                key = "<leader>dbl";
+                mode = "n";
+                options = {
+                    desc = "Set log point";
+                } // default_opts;
+            }
         ];
     opts = {
         mouse = "a";
@@ -249,6 +331,27 @@
             settings = {
                 close_if_last_window = true;
                 filesystem.filtered_items.visible = true;
+            };
+        };
+        cmp-dap.enable = true;
+        dap-ui.enable = true;
+        dap-virtual-text.enable = true;
+        dap-python.enable = true;
+        dap = {
+            enable = true;
+            signs = {
+                dapBreakpoint = {
+                    text = "";
+                    texthl = "DapBreakpoint";
+                };
+                dapBreakpointCondition = {
+                    text = "";
+                    texthl = "DapBreakpointCondition";
+                };
+                dapLogPoint = {
+                    text = "";
+                    texthl = "DapLogPoint";
+                };
             };
         };
     };
