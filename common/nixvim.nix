@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
     enable = true;
     viAlias = true;
@@ -279,6 +280,7 @@
     plugins = {
         treesitter = {
             enable = true;
+            grammarPackages = pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars;
             settings = {
                 highlight.enable = true;
             };
@@ -353,6 +355,13 @@
                     texthl = "DapLogPoint";
                 };
             };
+        };
+        neotest = {
+            enable = true;
+            settings = {
+                discovery.concurrency = 1;
+            };
+            adapters.python.enable = true;
         };
     };
     colorschemes.catppuccin = {
