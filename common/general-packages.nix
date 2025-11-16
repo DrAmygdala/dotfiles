@@ -40,4 +40,5 @@ with pkgs; [
     evince
     gh
     unzip
+    dnsutils
 ]
