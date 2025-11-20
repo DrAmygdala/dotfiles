@@ -47,6 +47,7 @@
     zsh-syntax-highlighting.enable = true;
     yazi.enable = true;
     btop.enable = true;
+    swaylock.enable = true;
     # sway.enable = true;
     # cursors.enable = true;
     thunderbird = {
@@ -82,4 +83,5 @@
   programs.nixvim = import ./common/nixvim.nix { inherit pkgs; };
   programs.tealdeer = import ./common/tealdeer-settings.nix;
   programs.ssh = import ./common/ssh-settings.nix;
+  programs.swaylock = import ./common/swaylock-settings.nix;
 }
