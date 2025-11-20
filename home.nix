@@ -67,6 +67,7 @@
   services.psd.enable = true;
   services.copyq.enable = true;
   services.wlsunset = import ./common/wlsunset-settings.nix;
+  services.swayidle = import ./common/swayidle-settings.nix { inherit pkgs; };
 
   programs.delta = import ./common/delta-settings.nix;
   programs.thunderbird = import ./common/thunderbird-settings.nix;
