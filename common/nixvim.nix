@@ -261,6 +261,72 @@
                     desc = "Set log point";
                 } // default_opts;
             }
+
+            # Neotest
+            {
+                action = "<cmd>lua require('neotest').run.run()<CR>";
+                key = "<leader>tr";
+                mode = "n";
+                options = {
+                    desc = "Run nearest test";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>";
+                key = "<leader>tf";
+                mode = "n";
+                options = {
+                    desc = "Run all tests in this file";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>lua require('neotest').run.run({ suite = true })<CR>";
+                key = "<leader>ta";
+                mode = "n";
+                options = {
+                    desc = "Run all tests";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>";
+                key = "<leader>td";
+                mode = "n";
+                options = {
+                    desc = "Debug nearest test";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>lua require('neotest').run.stop()<CR>";
+                key = "<leader>ts";
+                mode = "n";
+                options = {
+                    desc = "Stop test";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>lua require('neotest').output.open()<CR>";
+                key = "<leader>to";
+                mode = "n";
+                options = {
+                    desc = "Show test output";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>lua require('neotest').output_panel.toggle()<CR>";
+                key = "<leader>tp";
+                mode = "n";
+                options = {
+                    desc = "Toggle output panel";
+                } // default_opts;
+            }
+            {
+                action = "<cmd>lua require('neotest').summary.toggle()<CR>";
+                key = "<leader>ts";
+                mode = "n";
+                options = {
+                    desc = "Toggle summary panel";
+                } // default_opts;
+            }
         ];
     opts = {
         mouse = "a";
@@ -327,6 +393,7 @@
         which-key.enable = true;
         ts-comments.enable = true;
         mini-pairs.enable = true;
+        mini-surround.enable = true;
         mini-ai.enable = true;
         neo-tree = {
             enable = true;
