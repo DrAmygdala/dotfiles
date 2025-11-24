@@ -41,4 +41,5 @@ with pkgs; [
     gh
     unzip
     dnsutils
+    freetube
 ]

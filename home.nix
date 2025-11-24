@@ -47,6 +47,7 @@
     zsh-syntax-highlighting.enable = true;
     yazi.enable = true;
     btop.enable = true;
+    freetube.enable = true;
     swaylock.enable = true;
     # sway.enable = true;
     # cursors.enable = true;
