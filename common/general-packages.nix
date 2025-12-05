@@ -42,4 +42,5 @@ with pkgs; [
     unzip
     dnsutils
     freetube
+    swayimg
 ]
