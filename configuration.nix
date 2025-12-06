@@ -28,6 +28,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Filebrowser stuff
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
+
   # Wireguard
   networking.firewall.allowedUDPPorts = [ 51820 ];
   services.resolved.enable = true;
