@@ -87,4 +87,5 @@
   programs.tealdeer = import ./common/tealdeer-settings.nix;
   programs.ssh = import ./common/ssh-settings.nix;
   programs.swaylock = import ./common/swaylock-settings.nix;
+  programs.lutris = import ./common/lutris-settings.nix { inherit pkgs; };
 }
