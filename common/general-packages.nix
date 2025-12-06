@@ -22,7 +22,6 @@ with pkgs; [
     lnav
     fuzzel
     yazi
-    xfce.thunar
     copyq
     betterdiscordctl
     kdePackages.kate

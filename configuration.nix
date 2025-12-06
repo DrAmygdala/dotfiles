@@ -28,6 +28,12 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Filebrowser stuff
+  programs.thunar = import ./common/thunar-settings.nix { inherit pkgs; };
+  programs.xfconf.enable = true;
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
+
   # Wireguard
   networking.firewall.allowedUDPPorts = [ 51820 ];
   services.resolved.enable = true;
