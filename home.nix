@@ -25,6 +25,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    PAGER = "bat";
   };
 
   home.packages = lib.mkMerge [
@@ -49,6 +50,7 @@
     btop.enable = true;
     freetube.enable = true;
     swaylock.enable = true;
+    bat.enable = true;
     # sway.enable = true;
     # cursors.enable = true;
     thunderbird = {
