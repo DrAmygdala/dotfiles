@@ -57,7 +57,7 @@
     };
   };
   gtk = (import ./common/gtk-settings.nix { inherit pkgs; });
-  xdg = import ./common/xdg-settings.nix;
+  xdg = (import ./common/xdg-settings.nix { inherit pkgs; });
 
   wayland.windowManager.sway = (import ./common/sway-settings.nix { inherit pkgs lib; });
   editorconfig = import ./common/editorconfig.nix;
