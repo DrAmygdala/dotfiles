@@ -115,7 +115,7 @@
   users.users.kabir = {
     isNormalUser = true;
     description = "Kabir Mathur Chattopadhyay";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "gamemode" ];
     shell = pkgs.zsh;
   };
 
@@ -133,7 +133,13 @@
     git
   ];
 
-  programs.steam.enable = true;
+  # Gaming
+  programs.steam = {
+    enable = true;
+    protontricks.enable = true;
+    extest.enable = true;
+  };
+  programs.gamemode.enable = true;
 
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";
