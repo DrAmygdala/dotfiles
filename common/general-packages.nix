@@ -9,7 +9,6 @@ with pkgs; [
     fd
     tuc
     eza
-    bat
     prettyping
     ncdu
     autojump

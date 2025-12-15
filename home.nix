@@ -73,6 +73,7 @@
   services.swayidle = import ./common/swayidle-settings.nix { inherit pkgs; };
   services.flameshot = import ./common/flameshot-settings.nix;
 
+  programs.bat.enable = true;
   programs.delta = import ./common/delta-settings.nix;
   programs.thunderbird = import ./common/thunderbird-settings.nix;
   programs.waybar = (import ./common/waybar-settings.nix { inherit pkgs; });
