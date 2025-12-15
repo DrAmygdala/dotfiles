@@ -25,7 +25,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    PAGER = "bat";
+    MANPAGER = "bat -plman";
   };
 
   home.packages = lib.mkMerge [
