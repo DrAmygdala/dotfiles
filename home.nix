@@ -88,7 +88,6 @@
   programs.alacritty = import ./common/alacritty-settings.nix;
   programs.vscode = (import ./common/vscode-settings.nix { inherit pkgs; });
   programs.fuzzel = (import ./common/fuzzel-settings.nix { inherit pkgs; });
-  programs.wlogout = import ./common/wlogout-settings.nix;
   programs.direnv = import ./common/direnv-settings.nix;
   programs.nixvim = import ./common/nixvim.nix { inherit pkgs; };
   programs.tealdeer = import ./common/tealdeer-settings.nix;
