@@ -1,4 +1,8 @@
-{ config, pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -54,8 +58,8 @@
     # sway.enable = true;
     # cursors.enable = true;
     thunderbird = {
-        enable = true;
-        profile = "primary";
+      enable = true;
+      profile = "primary";
     };
   };
   gtk = (import ./common/gtk-settings.nix { inherit pkgs; });
@@ -76,7 +80,7 @@
   programs.bat.enable = true;
   programs.delta = import ./common/delta-settings.nix;
   programs.thunderbird = import ./common/thunderbird-settings.nix;
-  programs.waybar = (import ./common/waybar-settings.nix { inherit pkgs; });
+  programs.waybar = (import ./common/waybar-settings.nix);
   programs.starship = import ./common/starship-settings.nix;
   programs.tmux = (import ./common/tmux-settings.nix { inherit pkgs; });
   programs.git = import ./common/git-settings.nix;

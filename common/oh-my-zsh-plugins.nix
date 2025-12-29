@@ -1,8 +1,8 @@
 [
-    "autojump"
-    "direnv"
-    "kubectl"
-    "gitignore"
-    "httpie"
-    "gh"
+  "autojump"
+  "direnv"
+  "kubectl"
+  "gitignore"
+  "httpie"
+  "gh"
 ]

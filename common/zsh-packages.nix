@@ -1,5 +1,5 @@
 { pkgs }:
 [
-    pkgs.zsh-completions
-    pkgs.nix-zsh-completions
+  pkgs.zsh-completions
+  pkgs.nix-zsh-completions
 ]

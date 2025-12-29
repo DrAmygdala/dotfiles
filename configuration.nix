@@ -2,13 +2,18 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
@@ -46,9 +51,9 @@
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
-        intel-media-driver
-        vpl-gpu-rt
-        intel-vaapi-driver
+      intel-media-driver
+      vpl-gpu-rt
+      intel-vaapi-driver
     ];
   };
 
@@ -65,7 +70,7 @@
     enable = true;
     extraRemotes = [ "lvfs-testing" ];
     uefiCapsuleSettings = {
-        DisableCapsuleUpdateOnDisk = true;
+      DisableCapsuleUpdateOnDisk = true;
     };
   };
 
@@ -85,16 +90,16 @@
   virtualisation = {
     containers.enable = true;
     podman = {
-        enable = true;
-        dockerCompat = ! config.virtualisation.docker.enable;
-        defaultNetwork.settings.dns_enabled = true;
+      enable = true;
+      dockerCompat = !config.virtualisation.docker.enable;
+      defaultNetwork.settings.dns_enabled = true;
     };
     docker = {
+      enable = true;
+      rootless = {
         enable = true;
-        rootless = {
-            enable = true;
-            setSocketVariable = true;
-        };
+        setSocketVariable = true;
+      };
     };
   };
 
@@ -121,7 +126,11 @@
   users.users.kabir = {
     isNormalUser = true;
     description = "Kabir Mathur Chattopadhyay";
-    extraGroups = [ "networkmanager" "wheel" "gamemode" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "gamemode"
+    ];
     shell = pkgs.zsh;
   };
 
@@ -163,7 +172,10 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nix.optimise.automatic = true;
   nix.gc = {
     automatic = true;
@@ -180,7 +192,7 @@
     enable = true;
     theme = "spin";
     themePackages = with pkgs; [
-        (adi1090x-plymouth-themes.override { selected_themes = [ "spin" ]; })
+      (adi1090x-plymouth-themes.override { selected_themes = [ "spin" ]; })
     ];
   };
 
@@ -202,7 +214,7 @@
     accent = "maroon";
     flavor = "mocha";
     sddm = {
-        enable = true;
+      enable = true;
     };
     tty.enable = true;
     grub.enable = true;

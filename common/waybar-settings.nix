@@ -1,4 +1,3 @@
-{ pkgs }:
 {
   enable = true;
   systemd.enable = true;
@@ -13,14 +12,23 @@
       ];
       modules-left = [ "sway/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "tray" "wireplumber" "cpu" "memory" "battery" ];
+      modules-right = [
+        "tray"
+        "wireplumber"
+        "cpu"
+        "memory"
+        "battery"
+      ];
       clock = {
-      	format = "{:%a, %d. %b  %H:%M}";
+        format = "{:%a, %d. %b  %H:%M}";
       };
       wireplumber = {
         format = "{volume}% {icon}";
         format-icons = {
-          default = [ "" "" ];
+          default = [
+            ""
+            ""
+          ];
         };
         format-muted = "";
       };
@@ -40,17 +48,23 @@
       };
       memory = {
         interval = 1;
-      	format = "{}% ";
+        format = "{}% ";
       };
       battery = {
         bat = "BAT1";
         interval = 60;
         states = {
-            warning = 30;
-            critical = 15;
+          warning = 30;
+          critical = 15;
         };
         format = "{capacity}% {icon}";
-        format-icons = ["" "" "" "" ""];
+        format-icons = [
+          ""
+          ""
+          ""
+          ""
+          ""
+        ];
         max-length = 25;
       };
     };
