@@ -25,6 +25,7 @@
 
   imports = [
     ./git.nix
+    ./nixvim.nix
   ];
 
   nixpkgs.config = import ./common/config.nix;
@@ -90,7 +91,6 @@
   programs.vscode = (import ./common/vscode-settings.nix { inherit pkgs; });
   programs.fuzzel = (import ./common/fuzzel-settings.nix { inherit pkgs; });
   programs.direnv = import ./common/direnv-settings.nix;
-  programs.nixvim = import ./common/nixvim.nix { inherit pkgs; };
   programs.tealdeer = import ./common/tealdeer-settings.nix;
   programs.ssh = import ./common/ssh-settings.nix;
   programs.swaylock = import ./common/swaylock-settings.nix;
