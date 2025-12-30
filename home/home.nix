@@ -23,6 +23,10 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  imports = [
+    ./git.nix
+  ];
+
   nixpkgs.config = import ./common/config.nix;
 
   home.shellAliases = import ./common/shell-aliases.nix;
@@ -35,7 +39,6 @@
   home.packages = lib.mkMerge [
     (import ./common/general-packages.nix { inherit pkgs; })
     (import ./common/k8s-packages.nix { inherit pkgs; })
-    (import ./common/git-packages.nix { inherit pkgs; })
     (import ./common/zsh-packages.nix { inherit pkgs; })
   ];
 
@@ -78,12 +81,10 @@
   services.flameshot = import ./common/flameshot-settings.nix;
 
   programs.bat.enable = true;
-  programs.delta = import ./common/delta-settings.nix;
   programs.thunderbird = import ./common/thunderbird-settings.nix;
   programs.waybar = (import ./common/waybar-settings.nix);
   programs.starship = import ./common/starship-settings.nix;
   programs.tmux = (import ./common/tmux-settings.nix { inherit pkgs; });
-  programs.git = import ./common/git-settings.nix;
   programs.zsh = import ./common/zsh-settings.nix;
   programs.alacritty = import ./common/alacritty-settings.nix;
   programs.vscode = (import ./common/vscode-settings.nix { inherit pkgs; });
