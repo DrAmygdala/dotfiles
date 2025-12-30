@@ -26,6 +26,7 @@
   imports = [
     ./git.nix
     ./nixvim.nix
+    ./tui/alacritty-settings.nix
   ];
 
   nixpkgs.config = import ./common/config.nix;
@@ -87,7 +88,6 @@
   programs.starship = import ./common/starship-settings.nix;
   programs.tmux = (import ./common/tmux-settings.nix { inherit pkgs; });
   programs.zsh = import ./common/zsh-settings.nix;
-  programs.alacritty = import ./common/alacritty-settings.nix;
   programs.vscode = (import ./common/vscode-settings.nix { inherit pkgs; });
   programs.fuzzel = (import ./common/fuzzel-settings.nix { inherit pkgs; });
   programs.direnv = import ./common/direnv-settings.nix;
