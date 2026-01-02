@@ -24,9 +24,9 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ./git.nix
+    ./tui/git/git.nix
     ./nixvim.nix
-    ./tui/alacritty-settings.nix
+    ./tui/alacritty.nix
   ];
 
   nixpkgs.config = import ./common/config.nix;
@@ -42,6 +42,7 @@
     (import ./common/general-packages.nix { inherit pkgs; })
     (import ./common/k8s-packages.nix { inherit pkgs; })
     (import ./common/zsh-packages.nix { inherit pkgs; })
+    (import ./tui/git/packages.nix { inherit pkgs; })
   ];
 
   catppuccin = {

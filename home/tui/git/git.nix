@@ -1,7 +1,7 @@
 {
-  pkgs,
   config,
   lib,
+  ...
 }:
 {
   # `programs.git` will generate the config file: ~/.config/git/config
@@ -161,13 +161,11 @@
       aliases = {
         co = "pr checkout";
       };
+      git_protocol = "ssh";
+      prompt = "enabled";
+      spinner = "enabled";
     };
   };
-
-  programs.zsh.oh-my-zsh.plugins = config.programs.zsh.oh-my-zsh.plugins ++ [
-    "gh"
-    "gitignore"
-  ];
 
   programs.delta = {
     enable = true;
@@ -178,8 +176,5 @@
     enableGitIntegration = true;
   };
 
-  catpuccin.delta.enable = true;
-  programs.gitleaks.enable = true;
-  programs.git-town.enable = true;
-  programs.git-ignore.enable = true;
+  catppuccin.delta.enable = true;
 }
