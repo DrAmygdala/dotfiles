@@ -31,16 +31,31 @@
   security.pam.services.login.enableGnomeKeyring = true;
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    plugins = with pkgs; [
+      networkmanager-openvpn
+    ];
+  };
 
   # Filebrowser stuff
-  programs.thunar = import ./common/thunar-settings.nix { inherit pkgs; };
+  programs.thunar = import ./home/common/thunar-settings.nix { inherit pkgs; };
   programs.xfconf.enable = true;
   services.gvfs.enable = true;
   services.tumbler.enable = true;
 
-  # Wireguard
-  networking.firewall.allowedUDPPorts = [ 51820 ];
+  networking.firewall = rec {
+    # Wireguard
+    allowedUDPPorts = [ 51820 ];
+    # KDE Connect ports
+    allowedTCPPortRanges = [
+      {
+        from = 1714;
+        to = 1764;
+      }
+    ];
+    allowedUDPPortRanges = allowedTCPPortRanges;
+  };
   services.resolved.enable = true;
 
   # Enable Bluetooth
