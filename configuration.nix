@@ -154,6 +154,14 @@
 
   programs.zsh.enable = true;
   programs.sway.enable = true;
+  programs.nh = {
+    enable = true;
+    clean = {
+      enable = true;
+      extraArgs = "--keep 5 --optimise";
+    };
+    flake = "/etc/nixos";
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -191,11 +199,6 @@
     "nix-command"
     "flakes"
   ];
-  nix.optimise.automatic = true;
-  nix.gc = {
-    automatic = true;
-    options = "--delete-older-than 14d";
-  };
 
   # Fonts
   fonts.packages = with pkgs; [
