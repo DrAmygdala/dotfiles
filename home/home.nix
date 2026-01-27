@@ -27,6 +27,7 @@
     ./tui/git/git.nix
     ./nixvim.nix
     ./tui/alacritty.nix
+    ./tui/nh.nix
   ];
 
   nixpkgs.config = import ./common/config.nix;
