@@ -28,6 +28,7 @@
     ./nixvim.nix
     ./tui/alacritty.nix
     ./tui/nh.nix
+    ./gui/foliate.nix
   ];
 
   nixpkgs.config = import ./common/config.nix;
