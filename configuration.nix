@@ -15,6 +15,7 @@
     ./hardware-configuration.nix
   ];
 
+  programs.nix-ld.enable = true;
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub = {
