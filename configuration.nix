@@ -63,14 +63,14 @@
   hardware.bluetooth.enable = true;
 
   # Graphics
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [
-      intel-media-driver
-      vpl-gpu-rt
-      intel-vaapi-driver
-    ];
-  };
+  # hardware.graphics = {
+  #   enable = true;
+  #   extraPackages = with pkgs; [
+  #     intel-media-driver
+  #     vpl-gpu-rt
+  #     intel-vaapi-driver
+  #   ];
+  # };
 
   # Set your time zone.
   time.timeZone = "America/Vancouver";
