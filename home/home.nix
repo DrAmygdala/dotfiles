@@ -30,6 +30,7 @@
     ./tui/nh.nix
     ./gui/foliate.nix
     ./email/proton.nix
+    ./noctalia.nix
   ];
 
   nixpkgs.config = import ./common/config.nix;
@@ -52,7 +53,6 @@
     flavor = "mocha";
     accent = "maroon";
     alacritty.enable = true;
-    waybar.enable = true;
     swaync.enable = true;
     eza.enable = true;
     fuzzel.enable = true;
@@ -77,8 +77,6 @@
   wayland.windowManager.sway = (import ./common/sway-settings.nix { inherit pkgs lib; });
   editorconfig = import ./common/editorconfig.nix;
   services.swaync = import ./common/swaync-settings.nix;
-  services.network-manager-applet.enable = true;
-  services.blueman-applet.enable = true;
   services.restic = import ./common/restic.nix;
   services.psd.enable = true;
   services.copyq.enable = true;
@@ -88,7 +86,6 @@
 
   programs.bat.enable = true;
   programs.thunderbird = import ./common/thunderbird-settings.nix;
-  programs.waybar = (import ./common/waybar-settings.nix);
   programs.starship = import ./common/starship-settings.nix;
   programs.tmux = (import ./common/tmux-settings.nix { inherit pkgs; });
   programs.zsh = import ./common/zsh-settings.nix;

@@ -27,7 +27,6 @@ with pkgs;
   kdePackages.kate
   httpie
   brightnessctl
-  networkmanagerapplet
   standardnotes
   bitwarden-desktop
   libreoffice-fresh

@@ -60,7 +60,6 @@
   services.resolved.enable = true;
 
   # Enable Bluetooth
-  services.blueman.enable = true;
   hardware.bluetooth.enable = true;
 
   # Graphics
