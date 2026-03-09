@@ -29,6 +29,7 @@
     ./tui/alacritty.nix
     ./tui/nh.nix
     ./gui/foliate.nix
+    ./email/proton.nix
   ];
 
   nixpkgs.config = import ./common/config.nix;
