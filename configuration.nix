@@ -5,7 +5,6 @@
 {
   config,
   pkgs,
-  inputs,
   ...
 }:
 
@@ -153,6 +152,7 @@
   programs.firefox.enable = true;
 
   programs.zsh.enable = true;
+  programs.niri.enable = true;
   programs.sway.enable = true;
   programs.nh = {
     enable = true;
