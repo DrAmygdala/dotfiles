@@ -77,8 +77,8 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  services.power-profiles-daemon.enable = false;
-  services.tlp.enable = true;
+  services.tuned.enable = true;
+  services.upower.enable = true;
   services.thermald.enable = true;
   services.fwupd = {
     enable = true;

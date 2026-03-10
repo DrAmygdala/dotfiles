@@ -159,7 +159,7 @@
         settingsPanelSideBarCardStyle = false;
       };
       location = {
-        name = "Tokyo";
+        name = "Vancouver";
         weatherEnabled = true;
         weatherShowEffects = true;
         useFahrenheit = false;
@@ -554,6 +554,14 @@
       ];
       states = {
         network-manager-vpn = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+        catwalk = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+        keybind-cheatsheet = {
           enabled = true;
           sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
         };
