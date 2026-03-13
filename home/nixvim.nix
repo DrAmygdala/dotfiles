@@ -392,7 +392,7 @@
         enable = true;
         servers = {
           nixd.enable = true;
-          pyrefly.enable = true;
+          pyright.enable = true;
           bashls.enable = true;
           marksman.enable = true;
           yamlls = {
