@@ -364,6 +364,46 @@
           }
           // default_opts;
         }
+
+        # Mermaid
+        {
+          action = "<cmd>lua ExportMermaidToSVG()<cr>";
+          key = "<leader>me";
+          mode = "n";
+          options = {
+            desc = "Export mermaid diagram to SVG";
+          }
+          // default_opts;
+        }
+
+        # Live Preview
+        {
+          action = "<cmd>LivePreview start<cr>";
+          key = "<leader>ps";
+          mode = "n";
+          options = {
+            desc = "Start preview";
+          }
+          // default_opts;
+        }
+        {
+          action = "<cmd>LivePreview close<cr>";
+          key = "<leader>pe";
+          mode = "n";
+          options = {
+            desc = "End preview";
+          }
+          // default_opts;
+        }
+        {
+          action = "<cmd>LivePreview pick<cr>";
+          key = "<leader>pp";
+          mode = "n";
+          options = {
+            desc = "Pick file to preview";
+          }
+          // default_opts;
+        }
       ];
     opts = {
       mouse = "a";
@@ -433,6 +473,7 @@
       mini-pairs.enable = true;
       mini-surround.enable = true;
       mini-ai.enable = true;
+      markview.enable = true;
       neo-tree = {
         enable = true;
         settings = {
@@ -476,5 +517,28 @@
         transparent_background = true;
       };
     };
+    extraPackages = [ pkgs.mermaid-cli ];
+    extraPlugins = [ pkgs.vimPlugins.live-preview-nvim ];
+    extraConfigLua = ''
+      require('livepreview').setup({
+        browser = "firefox",
+      })
+      function ExportMermaidToSVG()
+        local src = vim.fn.expand("%:p")
+        local out = vim.fn.expand("%:p:r") .. ".svg"
+        vim.fn.jobstart(
+          { "mmdc", "-i", src, "-o", out, "-b", "transparent"},
+          {
+            on_exit = function(_, code)
+              if code == 0 then
+                vim.notify("Exported: " .. out, vim.log.levels.INFO)
+              else
+                vim.notify("mmdc failed (exit " .. code .. ")", vim.log.levels.ERROR)
+              end
+            end,
+          }
+        )
+      end
+    '';
   };
 }
