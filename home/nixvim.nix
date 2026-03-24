@@ -432,6 +432,7 @@
         enable = true;
         servers = {
           nixd.enable = true;
+          terraformls.enable = true;
           pyright.enable = true;
           bashls.enable = true;
           marksman.enable = true;
