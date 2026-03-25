@@ -102,15 +102,16 @@
 
   # Enable podman & docker
   virtualisation = {
-    containers.enable = true;
-    podman = {
-      enable = true;
-      dockerCompat = !config.virtualisation.docker.enable;
-      defaultNetwork.settings.dns_enabled = true;
-    };
+    # containers.enable = true;
+    # podman = {
+    #   enable = true;
+    #   dockerCompat = !config.virtualisation.docker.enable && !config.virtualisation.docker.rootless.enable;
+    #   defaultNetwork.settings.dns_enabled = true;
+    # };
     docker = {
-      enable = true;
+      enable = false;
       rootless = {
+        # Check for a broken ~/.config/systemd/user/docker.service if this breaks
         enable = true;
         setSocketVariable = true;
       };
@@ -144,6 +145,7 @@
       "networkmanager"
       "wheel"
       "gamemode"
+      "docker"
     ];
     shell = pkgs.zsh;
   };
