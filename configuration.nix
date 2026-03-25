@@ -100,14 +100,8 @@
     variant = "";
   };
 
-  # Enable podman & docker
+  # Enable docker
   virtualisation = {
-    # containers.enable = true;
-    # podman = {
-    #   enable = true;
-    #   dockerCompat = !config.virtualisation.docker.enable && !config.virtualisation.docker.rootless.enable;
-    #   defaultNetwork.settings.dns_enabled = true;
-    # };
     docker = {
       enable = false;
       rootless = {
@@ -115,6 +109,7 @@
         enable = true;
         setSocketVariable = true;
       };
+      autoPrune.enable = true;
     };
   };
 
