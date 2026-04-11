@@ -17,6 +17,7 @@
     # - https://github.com/alexkaratarakis/gitattributes
     # - https://github.com/github/gitignore
     enable = true;
+    signing.format = null;
     attributes = [
       # Common settings that generally should always be used with your language specific settings
       # Source: https://github.com/alexkaratarakis/gitattributes

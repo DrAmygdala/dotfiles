@@ -1,6 +1,7 @@
-{ pkgs }:
+{ pkgs, config, ... }:
 {
   enable = true;
+  gtk4.theme = config.gtk.theme;
   theme = {
     name = "Flat-Remix-GTK-Violet-Dark";
     package = pkgs.flat-remix-gtk;

@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }:
 
@@ -71,7 +72,7 @@
       profile = "primary";
     };
   };
-  gtk = (import ./common/gtk-settings.nix { inherit pkgs; });
+  gtk = (import ./common/gtk-settings.nix { inherit pkgs config; });
   xdg = import ./common/xdg-settings.nix;
 
   wayland.windowManager.sway = (import ./common/sway-settings.nix { inherit pkgs lib; });
