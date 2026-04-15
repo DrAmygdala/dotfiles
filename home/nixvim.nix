@@ -419,6 +419,7 @@
       cursorline = true;
       splitbelow = true;
       splitright = true;
+      spell = true;
     };
     plugins = {
       treesitter = {
