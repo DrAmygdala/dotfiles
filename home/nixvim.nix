@@ -376,6 +376,24 @@
           // default_opts;
         }
 
+        # D2
+        {
+          action = "<cmd>lua ExportD2ToSVG()<cr>";
+          key = "<leader>ed";
+          mode = "n";
+          options = {
+            desc = "Export d2 diagram to SVG";
+          };
+        }
+        {
+          action = "<cmd>lua LivePreviewD2()<cr>";
+          key = "<leader>pd";
+          mode = "n";
+          options = {
+            desc = "Export d2 diagram to SVG";
+          };
+        }
+
         # Live Preview
         {
           action = "<cmd>LivePreview start<cr>";
@@ -519,8 +537,14 @@
         transparent_background = true;
       };
     };
-    extraPackages = [ pkgs.mermaid-cli ];
-    extraPlugins = [ pkgs.vimPlugins.live-preview-nvim ];
+    extraPackages = [
+      pkgs.mermaid-cli
+      pkgs.d2
+    ];
+    extraPlugins = with pkgs.vimPlugins; [
+      live-preview-nvim
+      d2-vim
+    ];
     extraConfigLua = ''
       require('livepreview').setup({
         browser = "firefox",
@@ -536,6 +560,38 @@
                 vim.notify("Exported: " .. out, vim.log.levels.INFO)
               else
                 vim.notify("mmdc failed (exit " .. code .. ")", vim.log.levels.ERROR)
+              end
+            end,
+          }
+        )
+      end
+      function ExportD2ToSVG()
+        local src = vim.fn.expand("%:p")
+        local out = vim.fn.expand("%:p:r") .. ".svg"
+        vim.fn.jobstart(
+          { "d2", src, out },
+          {
+            on_exit = function(_, code)
+              if code == 0 then
+                vim.notify("Exported: " .. out, vim.log.levels.INFO)
+              else
+                vim.notify("d2 failed (exit " .. code .. ")", vim.log.levels.ERROR)
+              end
+            end,
+          }
+        )
+      end
+      function LivePreviewD2()
+        local src = vim.fn.expand("%:p")
+        local out = vim.fn.expand("%:p:r") .. ".svg"
+        vim.fn.jobstart(
+          { "d2", "-w", src, out },
+          {
+            on_exit = function(_, code)
+              if code == 0 then
+                vim.notify("Exported: " .. out, vim.log.levels.INFO)
+              else
+                vim.notify("d2 failed (exit " .. code .. ")", vim.log.levels.ERROR)
               end
             end,
           }
