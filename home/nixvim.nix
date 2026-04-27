@@ -25,7 +25,7 @@
         }
 
         # Resize
-        # From the persepctive of the top left corner
+        # From the perspective of the top left corner
         {
           action = "<cmd>vertical resize -2<CR>";
           key = "<C-Left>";
@@ -569,7 +569,7 @@
         local src = vim.fn.expand("%:p")
         local out = vim.fn.expand("%:p:r") .. ".svg"
         vim.fn.jobstart(
-          { "d2", src, out },
+          { "d2", "--theme=0", "--dark-theme=200", src, out },
           {
             on_exit = function(_, code)
               if code == 0 then
@@ -585,7 +585,7 @@
         local src = vim.fn.expand("%:p")
         local out = vim.fn.expand("%:p:r") .. ".svg"
         vim.fn.jobstart(
-          { "d2", "-w", src, out },
+          { "d2", "--theme=0", "--dark-theme=200", "-w", src, out },
           {
             on_exit = function(_, code)
               if code == 0 then
