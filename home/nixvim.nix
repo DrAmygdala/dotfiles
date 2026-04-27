@@ -24,6 +24,17 @@
           // default_opts;
         }
 
+        # Mini files
+        {
+          action = "<cmd>lua MiniFiles.open()<CR>";
+          key = "<C-a>";
+          mode = "n";
+          options = {
+            desc = "Open mini-files";
+          }
+          // default_opts;
+        }
+
         # Resize
         # From the perspective of the top left corner
         {
@@ -490,6 +501,7 @@
       telescope.enable = true;
       which-key.enable = true;
       ts-comments.enable = true;
+      mini-files.enable = true;
       mini-pairs.enable = true;
       mini-surround.enable = true;
       mini-ai.enable = true;
