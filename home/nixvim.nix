@@ -488,10 +488,15 @@
         settings = {
           sources = [
             { name = "nvim_lsp"; }
+            { name = "nvim_lsp_signature_help"; }
+            { name = "nvim_lsp_document_symbol"; }
+            { name = "spell"; }
+            { name = "fuzzy_path"; }
           ];
           mapping = {
             "<CR>" = "cmp.mapping.confirm({ select = true })";
             "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+            "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
           };
         };
       };
