@@ -279,7 +279,7 @@
           key = "<leader>dd";
           mode = "n";
           options = {
-            desc = "Togle Dap UI";
+            desc = "Toggle Dap UI";
           }
           // default_opts;
         }
@@ -500,6 +500,89 @@
           };
         };
       };
+      lint = {
+        enable = true;
+        lintersByFt = {
+          python = [
+            "bandit"
+            "ruff"
+            "mypy"
+            "trivy"
+          ];
+          bash = [
+            "shellcheck"
+            "trivy"
+          ];
+          nix = [ "nix" ];
+          json = [ "jsonlint" ];
+          terraform = [
+            "tofu"
+            "trivy"
+          ];
+          markdown = [ "vale" ];
+          dockerfile = [
+            "hadolint"
+            "trivy"
+          ];
+          yaml = [
+            "yamllint"
+            "trivy"
+          ];
+        };
+      };
+      conform-nvim = {
+        enable = true;
+        settings = {
+          format_on_save = # Lua
+            ''
+              function(bufnr)
+                if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+                  return
+                end
+
+                local function on_format(err)
+                  if err and err:match("timeout$") then
+                    slow_format_filetypes[vim.bo[bufnr].filetype] = true
+                  end
+                end
+
+                return { timeout_ms = 200, lsp_fallback = true }, on_format
+               end
+            '';
+          formatters_by_ft = {
+            bash = [
+              "shellcheck"
+              "shellharden"
+              "shfmt"
+            ];
+            sh = [ "shfmt" ];
+            d2 = [ "d2" ];
+            json = [
+              "json_repair"
+              "yq"
+            ];
+            kdl = [ "kdlfmt" ];
+            markdown = [
+              "markdown-toc"
+              "rumdl"
+              "mdsf"
+            ];
+            nix = [ "nixfmt" ];
+            python = [
+              "pyupgrade"
+              "ruff_fix"
+              "ruff_format"
+              "ruff_organize_imports"
+            ];
+            sql = [ "sqlfluff" ];
+            toml = [ "yq" ];
+            terraform = [ "tofu_fmt" ];
+            yaml = [ "yq" ];
+            "*" = [ "codespell" ];
+            "_" = [ "trim_whitespace" ];
+          };
+        };
+      };
       bufferline.enable = true;
       web-devicons.enable = true;
       lualine.enable = true;
@@ -557,6 +640,27 @@
     extraPackages = [
       pkgs.mermaid-cli
       pkgs.d2
+      pkgs.yamllint
+      pkgs.yq
+      pkgs.codespell
+      pkgs.sqlfluff
+      pkgs.pyupgrade
+      pkgs.ruff
+      pkgs.mypy
+      pkgs.bandit
+      pkgs.markdown-toc
+      pkgs.rumdl
+      pkgs.mdsf
+      pkgs.kdlfmt
+      pkgs.json-repair
+      pkgs.shellcheck
+      pkgs.shellharden
+      pkgs.opentofu
+      pkgs.nixfmt
+      pkgs.shfmt
+      pkgs.trivy
+      pkgs.hadolint
+      pkgs.vale
     ];
     extraPlugins = with pkgs.vimPlugins; [
       live-preview-nvim
