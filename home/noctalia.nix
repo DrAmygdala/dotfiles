@@ -220,7 +220,7 @@
         wallhavenPurity = "100";
         wallhavenRatios = "";
         wallhavenApiKey = "";
-        wallhavenResolutionMode = "atleast";
+        wallhavenResolutionMode = "atleast"; # codespell:ignore atleast
         wallhavenResolutionWidth = "";
         wallhavenResolutionHeight = "";
         sortOrder = "name";
@@ -521,7 +521,7 @@
         session = "";
       };
       plugins = {
-        autoUpdate = false;
+        autoUpdate = true;
       };
       idle = {
         enabled = false;
