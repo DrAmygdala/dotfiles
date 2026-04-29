@@ -549,7 +549,7 @@
                   end
                 end
 
-                return { timeout_ms = 200, lsp_fallback = true }, on_format
+                return { timeout_ms = 300, lsp_fallback = true }, on_format
                end
             '';
           formatters_by_ft = {
