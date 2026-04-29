@@ -514,20 +514,23 @@
             "trivy"
           ];
           nix = [ "nix" ];
-          json = [ "jsonlint" ];
+          json = [ "yq" ];
+          toml = [ "yq" ];
+          sql = [ "sqlfluff" ];
           terraform = [
             "tofu"
             "trivy"
           ];
-          markdown = [ "vale" ];
+          markdown = [ "rumdl" ];
           dockerfile = [
             "hadolint"
             "trivy"
           ];
           yaml = [
-            "yamllint"
+            "yq"
             "trivy"
           ];
+          "*" = [ "codespell" ];
         };
       };
       conform-nvim = {
@@ -640,7 +643,6 @@
     extraPackages = [
       pkgs.mermaid-cli
       pkgs.d2
-      pkgs.yamllint
       pkgs.yq
       pkgs.codespell
       pkgs.sqlfluff
@@ -660,7 +662,6 @@
       pkgs.shfmt
       pkgs.trivy
       pkgs.hadolint
-      pkgs.vale
     ];
     extraPlugins = with pkgs.vimPlugins; [
       live-preview-nvim
