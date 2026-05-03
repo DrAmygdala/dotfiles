@@ -28,12 +28,4 @@
   chown = "chown --preserve-root";
   chmod = "chmod --preserve-root";
   chgrp = "chgrp --preserve-root";
-
-  # Pyenv aliases
-  pa = "pyenv activate";
-  pd = "pyenv deactivate";
-
-  # Home Manager aliases
-  switch-home = "home-manager switch --flake ~/.config/home-manager#kabir";
-  switch-work = "home-manager switch --flake ~/.config/home-manager#work";
 }
