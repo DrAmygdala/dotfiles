@@ -1,6 +1,7 @@
 { pkgs }:
 with pkgs;
 [
+  xwayland-satellite
   networkmanagerapplet
   isd
   lshw
