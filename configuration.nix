@@ -37,7 +37,6 @@
       networkmanager-openvpn
     ];
     wifi = {
-      backend = "iwd";
       macAddress = "random";
       scanRandMacAddress = true;
     };
