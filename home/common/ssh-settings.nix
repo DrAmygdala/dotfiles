@@ -8,7 +8,7 @@
       controlMaster = "no";
       controlPath = "~/.ssh/master-%r@%n:%p";
       controlPersist = "no";
-      forwardAgent = true;
+      forwardAgent = false;
       hashKnownHosts = true;
       serverAliveCountMax = 3;
       serverAliveInterval = 0;
