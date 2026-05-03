@@ -1,6 +1,7 @@
 { pkgs }:
 with pkgs;
 [
+  networkmanagerapplet
   isd
   lshw
   dmidecode
