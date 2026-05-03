@@ -38,6 +38,8 @@
     ];
     wifi = {
       backend = "iwd";
+      macAddress = "random";
+      scanRandMacAddress = true;
     };
   };
 
