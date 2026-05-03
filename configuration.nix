@@ -36,6 +36,9 @@
     plugins = with pkgs; [
       networkmanager-openvpn
     ];
+    wifi = {
+      backend = "iwd";
+    };
   };
 
   # Filebrowser stuff
@@ -150,7 +153,7 @@
 
   programs.zsh.enable = true;
   programs.niri.enable = true;
-  programs.sway.enable = true;
+  # programs.sway.enable = true;
   programs.nh = {
     enable = true;
     clean = {
