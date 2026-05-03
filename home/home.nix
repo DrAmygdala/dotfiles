@@ -65,7 +65,6 @@
     freetube.enable = true;
     swaylock.enable = true;
     bat.enable = true;
-    # sway.enable = true;
     # cursors.enable = true;
     thunderbird = {
       enable = true;
@@ -75,7 +74,6 @@
   gtk = (import ./common/gtk-settings.nix { inherit pkgs config; });
   xdg = import ./common/xdg-settings.nix;
 
-  wayland.windowManager.sway = (import ./common/sway-settings.nix { inherit pkgs lib; });
   editorconfig = import ./common/editorconfig.nix;
   services.swaync = import ./common/swaync-settings.nix;
   services.restic = import ./common/restic.nix;
