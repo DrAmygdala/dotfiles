@@ -62,7 +62,7 @@
       forEachSystem = nixpkgs.lib.genAttrs (import systems);
     in
     {
-      nixosConfigurations.kabir-laptop = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.absgard = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix

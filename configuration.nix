@@ -24,7 +24,7 @@
     useOSProber = true;
   };
 
-  networking.hostName = "kabir-laptop"; # Define your hostname.
+  networking.hostName = "absgard";
 
   # Enable keyring
   services.gnome.gnome-keyring.enable = true;
