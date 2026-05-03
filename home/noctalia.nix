@@ -67,6 +67,9 @@
             {
               id = "Brightness";
             }
+            { id = "plugin:catwalk"; }
+            { id = "plugin:network-manager-vpn"; }
+            { id = "plugin:keybind-cheatsheet"; }
             {
               id = "ControlCenter";
             }
