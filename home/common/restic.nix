@@ -2,10 +2,10 @@
   enable = true;
   backups = {
     homeBackup = {
-      passwordFile = "/home/kabir/.restic-password";
+      passwordFile = "/home/sourlemon/.restic-password";
       paths = [
-        "/home/kabir/Documents"
-        "/home/kabir/Downloads"
+        "/home/sourlemon/Documents"
+        "/home/sourlemon/Downloads"
       ];
       pruneOpts = [
         "--keep-last=1"

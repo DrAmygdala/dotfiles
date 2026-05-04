@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of kabir";
+  description = "Nix configuration";
 
   inputs = {
     # Nixpkgs
@@ -71,7 +71,7 @@
       };
 
       homeConfigurations = {
-        kabir = home-manager.lib.homeManagerConfiguration {
+        sourlemon = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
           # Specify your home configuration modules here, for example,

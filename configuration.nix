@@ -137,9 +137,9 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.kabir = {
+  users.users.sourlemon = {
     isNormalUser = true;
-    description = "Kabir Mathur Chattopadhyay";
+    description = "Sourlemon, Necromancer Supreme";
     extraGroups = [
       "networkmanager"
       "wheel"
@@ -184,7 +184,7 @@
   };
 
   environment.shells = [
-    "/home/kabir/.nix-profile/bin/zsh"
+    "/home/sourlemon/.nix-profile/bin/zsh"
   ];
 
   # This value determines the NixOS release from which the default
