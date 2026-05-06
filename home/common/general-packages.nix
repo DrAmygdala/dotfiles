@@ -1,6 +1,7 @@
 { pkgs }:
 with pkgs;
 [
+  jellyfin-desktop
   xwayland-satellite
   networkmanagerapplet
   isd
