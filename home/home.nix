@@ -32,6 +32,7 @@
     ./gui/foliate.nix
     ./email/proton.nix
     ./noctalia.nix
+    ./gui/anki.nix
   ];
 
   nixpkgs.config = import ./common/config.nix;
