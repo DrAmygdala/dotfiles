@@ -1,7 +1,6 @@
 { pkgs }:
 {
   enable = true;
-  package = pkgs.vscodium;
   mutableExtensionsDir = true;
   profiles.default = {
     enableExtensionUpdateCheck = true;
