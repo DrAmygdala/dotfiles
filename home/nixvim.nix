@@ -482,20 +482,66 @@
           };
         };
       };
-      cmp = {
+      blink-cmp = {
         enable = true;
-        autoEnableSources = true;
         settings = {
-          sources = [
-            { name = "nvim_lsp"; }
-            { name = "nvim_lsp_signature_help"; }
-            { name = "nvim_lsp_document_symbol"; }
-            { name = "fuzzy_path"; }
-          ];
-          mapping = {
-            "<CR>" = "cmp.mapping.confirm({ select = true })";
-            "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-            "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+          signature = {
+            enabled = true;
+          };
+          completion.list.selection = {
+            preselect = false;
+          };
+          keymap = {
+            "<C-space>" = [
+              "show"
+              "show_documentation"
+              "hide_documentation"
+            ];
+            "<C-e>" = [
+              "hide"
+              "fallback"
+            ];
+            "<CR>" = [
+              "accept"
+              "fallback"
+            ];
+            "<Tab>" = [
+              "select_next"
+              "fallback"
+            ];
+            "<S-Tab>" = [
+              "select_prev"
+              "fallback"
+            ];
+            "<Up>" = [
+              "snippet_backward"
+              "fallback"
+            ];
+            "<Down>" = [
+              "snippet_forward"
+              "fallback"
+            ];
+            "<C-p>" = [
+              "select_prev"
+              "fallback_to_mappings"
+            ];
+            "<C-n>" = [
+              "select_next"
+              "fallback_to_mappings"
+            ];
+            "<C-b>" = [
+              "scroll_documentation_up"
+              "fallback"
+            ];
+            "<C-f>" = [
+              "scroll_documentation_down"
+              "fallback"
+            ];
+            "<C-k>" = [
+              "show_signature"
+              "hide_signature"
+              "fallback"
+            ];
           };
         };
       };
@@ -597,7 +643,6 @@
           filesystem.filtered_items.visible = true;
         };
       };
-      cmp-dap.enable = true;
       dap-ui.enable = true;
       dap-virtual-text.enable = true;
       dap-python.enable = true;
