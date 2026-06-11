@@ -636,6 +636,9 @@
       mini-surround.enable = true;
       mini-ai.enable = true;
       markview.enable = true;
+      neogit.enable = true;
+      diffview.enable = true;
+      gitsigns.enable = true;
       neo-tree = {
         enable = true;
         settings = {
