@@ -35,7 +35,8 @@
     ./email/proton.nix
     ./noctalia.nix
     ./gui/anki.nix
-    ./common/zsh-settings.nix
+    ./tui/zsh/zsh-settings.nix
+    ./packages.nix
   ];
 
   nixpkgs.config = import ./common/config.nix;
@@ -47,12 +48,7 @@
     MANPAGER = "bat -plman";
   };
 
-  home.packages = lib.mkMerge [
-    (import ./common/general-packages.nix { inherit pkgs; })
-    (import ./common/k8s-packages.nix { inherit pkgs; })
-    (import ./common/zsh-packages.nix { inherit pkgs; })
-    (import ./tui/git/packages.nix { inherit pkgs; })
-  ];
+  home.packages = config.my.pkgs;
 
   catppuccin = {
     flavor = "mocha";

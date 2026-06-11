@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 {
@@ -181,5 +182,9 @@
   my.zsh-plugins = [
     "gh"
     "gitignore"
+  ];
+  my.pkgs = with pkgs; [
+    git-ignore
+    git-town
   ];
 }

@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 {
@@ -9,6 +10,10 @@
     default = [ ];
   };
 
+  config.my.pkgs = with pkgs; [
+    zsh-completions
+    nix-zsh-completions
+  ];
   config.catppuccin.zsh-syntax-highlighting.enable = true;
   config.my.zsh-plugins = [
     "autojump"
