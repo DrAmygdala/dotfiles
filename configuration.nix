@@ -236,5 +236,6 @@
     };
     tty.enable = true;
     grub.enable = true;
+    autoEnable = false;
   };
 }

@@ -54,6 +54,7 @@
   catppuccin = {
     flavor = "mocha";
     accent = "maroon";
+    autoEnable = false;
     alacritty.enable = true;
     swaync.enable = true;
     eza.enable = true;
