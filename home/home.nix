@@ -35,6 +35,7 @@
     ./email/proton.nix
     ./noctalia.nix
     ./gui/anki.nix
+    ./common/zsh-settings.nix
   ];
 
   nixpkgs.config = import ./common/config.nix;
@@ -62,7 +63,6 @@
     fuzzel.enable = true;
     delta.enable = true;
     k9s.enable = true;
-    zsh-syntax-highlighting.enable = true;
     yazi.enable = true;
     btop.enable = true;
     freetube.enable = true;
@@ -88,7 +88,6 @@
 
   programs.bat.enable = true;
   programs.tmux = (import ./common/tmux-settings.nix { inherit pkgs; });
-  programs.zsh = import ./common/zsh-settings.nix;
   programs.vscodium = (import ./common/vscode-settings.nix { inherit pkgs; });
   programs.fuzzel = (import ./common/fuzzel-settings.nix { inherit pkgs; });
   programs.tealdeer = import ./common/tealdeer-settings.nix;

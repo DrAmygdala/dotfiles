@@ -178,4 +178,8 @@
   };
 
   catppuccin.delta.enable = true;
+  my.zsh-plugins = [
+    "gh"
+    "gitignore"
+  ];
 }
