@@ -25,6 +25,8 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ./tui/direnv-settings.nix
+    ./tui/prompt/starship-settings.nix
     ./tui/git/git.nix
     ./nixvim.nix
     ./tui/alacritty.nix
@@ -87,12 +89,10 @@
 
   programs.bat.enable = true;
   programs.thunderbird = import ./common/thunderbird-settings.nix;
-  programs.starship = import ./common/starship-settings.nix;
   programs.tmux = (import ./common/tmux-settings.nix { inherit pkgs; });
   programs.zsh = import ./common/zsh-settings.nix;
   programs.vscodium = (import ./common/vscode-settings.nix { inherit pkgs; });
   programs.fuzzel = (import ./common/fuzzel-settings.nix { inherit pkgs; });
-  programs.direnv = import ./common/direnv-settings.nix;
   programs.tealdeer = import ./common/tealdeer-settings.nix;
   programs.ssh = import ./common/ssh-settings.nix;
   programs.swaylock = import ./common/swaylock-settings.nix;
