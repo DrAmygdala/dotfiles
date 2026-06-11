@@ -87,7 +87,6 @@
   services.flameshot = import ./common/flameshot-settings.nix;
 
   programs.bat.enable = true;
-  programs.thunderbird = import ./common/thunderbird-settings.nix;
   programs.tmux = (import ./common/tmux-settings.nix { inherit pkgs; });
   programs.zsh = import ./common/zsh-settings.nix;
   programs.vscodium = (import ./common/vscode-settings.nix { inherit pkgs; });
