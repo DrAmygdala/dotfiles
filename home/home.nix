@@ -58,7 +58,6 @@
     accent = "maroon";
     autoEnable = false;
     alacritty.enable = true;
-    swaync.enable = true;
     eza.enable = true;
     fuzzel.enable = true;
     delta.enable = true;
