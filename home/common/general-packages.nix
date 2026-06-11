@@ -31,10 +31,8 @@ with pkgs;
   httpie
   brightnessctl
   standardnotes
-  bitwarden-desktop
   libreoffice-fresh
   obsidian
-  logseq
   discord
   jq
   wireguard-tools
