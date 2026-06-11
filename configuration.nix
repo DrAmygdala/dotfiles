@@ -112,6 +112,9 @@
         # Check for a broken ~/.config/systemd/user/docker.service if this breaks
         enable = true;
         setSocketVariable = true;
+        daemon.settings = {
+          dns = [ "8.8.8.8" ];
+        };
       };
       autoPrune.enable = true;
     };
