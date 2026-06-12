@@ -25,7 +25,6 @@
     traceroute
     putty
     mtr
-    restic
     tree
     lnav
     fuzzel
