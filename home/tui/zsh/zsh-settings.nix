@@ -18,7 +18,6 @@
   config.my.zsh-plugins = [
     "autojump"
     "direnv"
-    "kubectl"
     "httpie"
   ];
   config.programs.zsh = {

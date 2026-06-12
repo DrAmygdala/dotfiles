@@ -1,6 +1,5 @@
 {
   pkgs,
-  lib,
   config,
   ...
 }:
@@ -25,6 +24,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ./tui/k8s.nix
     ./tui/direnv-settings.nix
     ./tui/prompt/starship-settings.nix
     ./tui/git/git.nix

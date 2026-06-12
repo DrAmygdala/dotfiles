@@ -47,8 +47,5 @@
     dnsutils
     freetube
     swayimg
-    kubectl
-    kubernetes-helm
-    k9s
   ];
 }
