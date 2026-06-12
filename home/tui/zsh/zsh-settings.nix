@@ -19,6 +19,9 @@
     "autojump"
     "direnv"
     "httpie"
+    "docker"
+    "docker-compose"
+    "vi-mode"
   ];
   config.programs.zsh = {
     enable = true;
