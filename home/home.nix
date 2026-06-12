@@ -37,6 +37,7 @@
     ./gui/anki.nix
     ./tui/zsh/zsh-settings.nix
     ./packages.nix
+    ./backup.nix
   ];
 
   nixpkgs.config = import ./common/config.nix;
@@ -75,7 +76,6 @@
 
   editorconfig = import ./common/editorconfig.nix;
   services.swaync = import ./common/swaync-settings.nix;
-  services.restic = import ./common/restic.nix;
   services.psd.enable = true;
   services.copyq.enable = true;
   services.wlsunset = import ./common/wlsunset-settings.nix;
