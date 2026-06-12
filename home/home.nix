@@ -39,6 +39,7 @@
     ./tui/zsh/zsh-settings.nix
     ./packages.nix
     ./backup.nix
+    ./gaming.nix
   ];
 
   nixpkgs.config = import ./common/config.nix;
@@ -89,5 +90,4 @@
   programs.tealdeer = import ./common/tealdeer-settings.nix;
   programs.ssh = import ./common/ssh-settings.nix;
   programs.swaylock = import ./common/swaylock-settings.nix;
-  # programs.lutris = import ./common/lutris-settings.nix { inherit pkgs; };
 }
