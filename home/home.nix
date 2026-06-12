@@ -28,7 +28,8 @@
     ./tui/direnv-settings.nix
     ./tui/prompt/starship-settings.nix
     ./tui/git/git.nix
-    ./nixvim.nix
+    ./editors/nixvim.nix
+    ./editors/vscode-settings.nix
     ./tui/alacritty.nix
     ./tui/nh.nix
     ./gui/foliate.nix
@@ -74,7 +75,7 @@
   gtk = (import ./common/gtk-settings.nix { inherit pkgs config; });
   xdg = import ./common/xdg-settings.nix;
 
-  editorconfig = import ./common/editorconfig.nix;
+  editorconfig = import ./editors/editorconfig.nix;
   services.swaync = import ./common/swaync-settings.nix;
   services.psd.enable = true;
   services.copyq.enable = true;
@@ -84,7 +85,6 @@
 
   programs.bat.enable = true;
   programs.tmux = (import ./common/tmux-settings.nix { inherit pkgs; });
-  programs.vscodium = (import ./common/vscode-settings.nix { inherit pkgs; });
   programs.fuzzel = (import ./common/fuzzel-settings.nix { inherit pkgs; });
   programs.tealdeer = import ./common/tealdeer-settings.nix;
   programs.ssh = import ./common/ssh-settings.nix;
