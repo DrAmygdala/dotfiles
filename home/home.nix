@@ -57,6 +57,7 @@
     flavor = "mocha";
     accent = "maroon";
     autoEnable = false;
+    enable = true;
     alacritty.enable = true;
     eza.enable = true;
     fuzzel.enable = true;
