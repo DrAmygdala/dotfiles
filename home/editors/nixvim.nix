@@ -433,6 +433,22 @@
           }
           // default_opts;
         }
+
+        # Rename
+        {
+          action.__raw = ''
+            function()
+              return ":IncRename " .. vim.fn.expand("<cword>")
+            end
+          '';
+          key = "<leader>rn";
+          mode = "n";
+          options = {
+            desc = "LSP Rename";
+            expr = true;
+          }
+          // default_opts;
+        }
       ];
     opts = {
       mouse = "a";
@@ -623,6 +639,18 @@
             "*" = [ "codespell" ];
             "_" = [ "trim_whitespace" ];
           };
+        };
+      };
+      inc-rename = {
+        enable = true;
+        settings = {
+          input_buffer_type = "snacks";
+        };
+      };
+      snacks = {
+        enable = true;
+        settings = {
+          input.enable = true;
         };
       };
       bufferline.enable = true;
