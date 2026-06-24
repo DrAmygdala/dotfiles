@@ -485,6 +485,20 @@
           }
           // default_opts;
         }
+
+        # Code actions
+        {
+          action = "<cmd>lua require('actions-preview').code_actions()<cr>";
+          key = "<leader>gra";
+          mode = [
+            "n"
+            "v"
+          ];
+          options = {
+            desc = "Action preview";
+          }
+          // default_opts;
+        }
       ];
     opts = {
       mouse = "a";
@@ -515,7 +529,7 @@
         servers = {
           nixd.enable = true;
           terraformls.enable = true;
-          pyright.enable = true;
+          basedpyright.enable = true;
           bashls.enable = true;
           marksman.enable = true;
           yamlls = {
@@ -689,6 +703,7 @@
           input.enable = true;
         };
       };
+      actions-preview.enable = true;
       bufferline.enable = true;
       web-devicons.enable = true;
       lualine.enable = true;
