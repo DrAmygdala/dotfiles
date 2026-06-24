@@ -209,6 +209,42 @@
           }
           // default_opts;
         }
+        {
+          action = "<cmd>Telescope lsp_references<cr>";
+          key = "<leader>fr";
+          mode = "n";
+          options = {
+            desc = "Find references";
+          }
+          // default_opts;
+        }
+        {
+          action = "<cmd>Telescope lsp_incoming_calls<cr>";
+          key = "<leader>fi";
+          mode = "n";
+          options = {
+            desc = "Find incoming calls";
+          }
+          // default_opts;
+        }
+        {
+          action = "<cmd>Telescope lsp_outgoing_calls<cr>";
+          key = "<leader>fo";
+          mode = "n";
+          options = {
+            desc = "Find outgoing calls";
+          }
+          // default_opts;
+        }
+        {
+          action = "<cmd>Telescope diagnostics<cr>";
+          key = "<leader>fd";
+          mode = "n";
+          options = {
+            desc = "Find diagnostics";
+          }
+          // default_opts;
+        }
 
         # Debugging
         {
