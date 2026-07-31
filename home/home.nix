@@ -33,9 +33,10 @@
     ./tui/alacritty.nix
     ./tui/nh.nix
     ./gui/foliate.nix
+    ./gui/obs.nix
+    ./gui/anki.nix
     ./email/proton.nix
     ./noctalia.nix
-    ./gui/anki.nix
     ./tui/zsh/zsh-settings.nix
     ./packages.nix
     ./backup.nix
