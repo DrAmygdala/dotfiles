@@ -31,13 +31,13 @@
     yazi
     copyq
     betterdiscordctl
+    discord
     kdePackages.kate
     httpie
     brightnessctl
     standardnotes
     libreoffice-fresh
     obsidian
-    discord
     jq
     wireguard-tools
     evince
