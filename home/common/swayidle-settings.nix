@@ -11,7 +11,7 @@
     }
     {
       timeout = 600;
-      command = "${pkgs.systemd}/bin/systemctl suspend";
+      command = "[ cat /sys/class/power_supply/ACAD/online -eq 0 ] && ${pkgs.systemd}/bin/systemctl suspend";
     }
   ];
 }
