@@ -532,6 +532,7 @@
           basedpyright.enable = true;
           bashls.enable = true;
           marksman.enable = true;
+          ts_ls.enable = true;
           yamlls = {
             enable = true;
             extraOptions = {
